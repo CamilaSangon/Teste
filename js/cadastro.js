@@ -41,7 +41,7 @@ $("#btnFormulario6").click(function () {
 });
 
 $("#btnFormularioHom").click(function () {
-	window.open('formulario_hom_4.html','janela');
+	window.open('formulario_hom_1.html','janela');
 });
 
 $("#btnFormularioHom2").click(function () {
