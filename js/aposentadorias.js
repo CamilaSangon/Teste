@@ -162,6 +162,9 @@ $("#btnConsultarTriagem").click(function(e){
 		}else if ($("#cmbBeneficio").val() == "3"){
 			$("#dvAposentadoria").hide();
 			$("#dvPensoes").show();	
+		}else if ($("#cmbBeneficio").val() == "1"){
+			$("#dvAposentadoria").show();
+			$("#dvPensoes").show();	
 		}
 	}
 	else{
