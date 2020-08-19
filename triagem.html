@@ -260,24 +260,29 @@
             </div>
             <div class="card-body">
 			<div class="form-group">
+      <div class="row">
+        <div class="col-4"><label for="beneficio" class="mr-sm-2"><b>Selecione um ou todos os filtros de pesquisa</b> </label></div>
+      </div>
 			<div class="row">
-			<div class="col-4"><label for="beneficio" class="mr-sm-2"><b>Selecione por Tipo do Benefício:</b> </label></div>
-      <div class="col-4"><label for="beneficio" class="mr-sm-2"><b>Selecione por Usuário:</b> </label></div>
+			<div class="col-4"><label for="beneficio" class="mr-sm-2"><b>Tipo do Benefício:</b> </label></div>
+      <div class="col-4"><label for="beneficio" class="mr-sm-2"><b>Usuário:</b> </label></div>
       </div>	
 			<div class="row">
 			<div class="col-4">
 			<select name="beneficio" class="custom-select" id="cmbBeneficio"> 
-				<option value="0" selected>Selecione</option>
-				<option value="1">Aposentadoria</option>
-				<option value="2">Pensão</option>
+        <option value="0" selected>Selecione</option>
+        <option value="1">Todos</option>
+				<option value="2">Aposentadoria</option>
+				<option value="3">Pensão</option>
       </select></div>	
       <div class="col-4">
-        <select name="usuarios" class="custom-select" id="cmbUsuario01">
+        <select name="usuarios" class="custom-select" id="cmbUsuario">
           <option value="0">Selecione</option>
-          <option value="1">Bruna</option>
-          <option value="2">Vanessa</option>
-          <option value="3">Marcelo</option>
-          <option value="4">Terceiros</option>
+          <option value="1">Todos</option>
+          <option value="2">Bruna</option>
+          <option value="3">Vanessa</option>
+          <option value="4">Marcelo</option>
+          <option value="5">Terceiros</option>
         </select></div></div>
         </div>	
         <div class="form-group">
@@ -300,7 +305,7 @@
 					<th>DIB</th>
 					<th>Data tramitação ao COMPREV</th>
 					<th>Descrição dos Regimes</th>
-          <th>Operador</th>
+          <th>Usuário/Gestor</th>
           <th>Data da Atribuição</th>
           <th>Data da Triagem</th>
 					</tr>
@@ -319,8 +324,8 @@
 							<option value="3">Marcelo</option>
 							<option value="4">Terceiros</option>
             </select></td>
-            <td>04/08/2020</td>
-            <td>04/08/2020</td>
+            <td>24/07/2020</td>
+            <td>24/08/2020</td>
 					</tr>
 					<tr>					  
 						<td class="bg-gray-300">6000.2020/0000226-3</td>
@@ -328,7 +333,7 @@
 						<td>05/08/2020</td>
 						<td>04/08/2020</td>
 						<td>RGPS, SPPREV</td>
-						 <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
+						 <td><select name="usuarios" class="custom-select" id="cmbUsuario02">
 							<option value="0">Selecione</option>
 							<option value="1" selected>Bruna</option>
 							<option value="2">Vanessa</option>
@@ -344,7 +349,7 @@
 						<td>07/08/2020</td>
 						<td>06/08/2020</td>
 						<td>RGPS</td>
-						<td><select name="usuarios" class="custom-select" id="cmbUsuario01">
+						<td><select name="usuarios" class="custom-select" id="cmbUsuario03">
 							<option value="0">Selecione</option>
 							<option value="1">Bruna</option>
 							<option value="2" selected>Vanessa</option>
@@ -360,7 +365,7 @@
 						<td>07/08/2020</td>
 						<td>06/08/2020</td>
 						<td>OUTROS RPPS</td>
-						<td><select name="usuarios" class="custom-select" id="cmbUsuario01">
+						<td><select name="usuarios" class="custom-select" id="cmbUsuario04">
 							<option value="0">Selecione</option>
 							<option value="1">Bruna</option>
 							<option value="2" selected>Vanessa</option>
@@ -376,7 +381,7 @@
 						<td>07/08/2020</td>
 						<td>06/08/2020</td>
 						<td>RGPS</td>
-						<td><select name="usuarios" class="custom-select" id="cmbUsuario01">
+						<td><select name="usuarios" class="custom-select" id="cmbUsuario05">
 							<option value="0">Selecione</option>
 							<option value="1">Bruna</option>
 							<option value="2">Vanessa</option>
@@ -392,15 +397,15 @@
 						<td>11/08/2020</td>
 						<td>10/08/2020</td>
 						<td>SPPREV</td>
-						<td><select name="usuarios" class="custom-select" id="cmbUsuario01">
+						<td><select name="usuarios" class="custom-select" id="cmbUsuario06">
 							<option value="0">Selecione</option>
 							<option value="1">Bruna</option>
 							<option value="2">Vanessa</option>
 							<option value="3">Marcelo</option>
 							<option value="4" selected>Terceiros</option>
             </select></td>
-            <td>04/08/2020</td>
-            <td>04/08/2020</td>
+            <td>07/08/2020</td>
+            <td>07/08/2020</td>
 					</tr>
 				</tbody>
 			</table>
@@ -417,7 +422,9 @@
 						<th>Estado Atual da Aposentadoria (agrupar)</th>
 						<th>DIB Pensão</th>
 						<th>Data Tramitação COMPREV</th>
-						<th>Atribuir Processo</th>
+            <th>Usuário/Gestor</th>
+            <th>Data da Atribuição</th>
+            <th>Data da Triagem</th>
 					</tr>
 				</thead>
 				 <tbody style="font-size:10pt">
@@ -433,7 +440,9 @@
 							<option value="2">Vanessa</option>
 							<option value="3">Marcelo</option>
 							<option value="4">Terceiros</option>
-						</select></td>
+            </select></td>
+            <td>31/07/2020</td>
+						<td>31/07/2020</td>
 					</tr>
 						<tr>
 						<td class="bg-gray-300">6000.2020/0000233-5</td>
@@ -447,7 +456,9 @@
 							<option value="2">Vanessa</option>
 							<option value="3">Marcelo</option>
 							<option value="4">Terceiros</option>
-						</select></td>
+            </select></td>
+            <td>31/07/2020</td>
+						<td>31/07/2020</td>
 					</tr>
 					<tr>
 						<td class="bg-gray-300">6000.2020/0000235-1</td>
@@ -461,7 +472,9 @@
 							<option value="2" selected>Vanessa</option>
 							<option value="3">Marcelo</option>
 							<option value="4">Terceiros</option>
-						</select></td>
+            </select></td>
+            <td>31/07/2020</td>
+						<td>31/07/2020</td>
 					</tr>
 					<!--<tr>
 						<td class="bg-gray-300">6000.2020/0000223-8</td>
@@ -573,7 +586,7 @@
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Deseja atribuir esse processo ao usuário selecionado?</div>
+        <div class="modal-body">Deseja alterar a atribuição de processo para o usuário selecionado?</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
           <a class="btn btn-primary" data-dismiss="modal" href="#">Ok</a>
