@@ -155,11 +155,11 @@ $("#dvPensoes").hide();
 	 
 $("#btnConsultarTriagem").click(function(e){
 	if ($("#cmbBeneficio").val() != "0"){
-		if ($("#cmbBeneficio").val() == "1")
+		if ($("#cmbBeneficio").val() == "2")
 		{
 			$("#dvAposentadoria").show();
 			$("#dvPensoes").hide();	
-		}else if ($("#cmbBeneficio").val() == "2"){
+		}else if ($("#cmbBeneficio").val() == "3"){
 			$("#dvAposentadoria").hide();
 			$("#dvPensoes").show();	
 		}
