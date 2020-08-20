@@ -259,6 +259,31 @@
               <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info-circle mr-1"></i>Novas Concessões de Aposentadorias </h6>
             </div>
             <div class="card-body">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-10"><label for="beneficio" class="mr-sm-2"><b>Selecione um ou todos os filtros de pesquisa</b> </label></div>
+                </div>
+                <div class="row">
+                <div class="col-4"><label for="beneficio" class="mr-sm-2"><b>Usuário/Gestor:</b> </label></div>
+                <div class="col-4"><i class="far fa-calendar-alt"></i> <label for="dtTriagem" class="mr-sm-2"><b>Informe a data da triagem:</b> </label></div>
+                <div class="col-4"><i class="far fa-calendar-alt"></i> <label for="dtAtribuicao" class="mr-sm-2"><b>Informe a data de atribuição:</b> </label></div>
+              </div>	
+                <div class="row">	
+                <div class="col-4">
+                  <select name="usuarios" class="custom-select" id="cmbUsuario">
+                    <option value="0">Selecione</option>
+                    <option value="1">Todos</option>
+                    <option value="2">Bruna</option>
+                    <option value="3">Vanessa</option>
+                    <option value="4">Marcelo</option>
+                    <option value="5">Terceiros</option>
+                  </select></div>
+                  <div class="col-4"><input type="text" id="dtTriagem" class="form-control" value="99/99/9999"/></div>	
+                  <div class="col-4"><input type="text" id="dtTriagem" class="form-control" value="99/99/9999"/></div>
+  
+                </div>
+                  </div>	
+      <br/>
 			<div class="form-group">
 			<div class="table-responsive">
 			<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -271,7 +296,9 @@
 					<th>Valor do Benefício</th>
 					<th>Data tramitação ao COMPREV</th>
 					<th>Descrição dos Regimes</th>
-					<th>Processo Atribuído - Usuário</th>
+          <th>Atribuir Processo</th>
+          <th>Data da Atribuição</th>
+          <th>Data da Triagem</th>
 					</tr>
 				</thead>
 				<tbody style="font-size:10pt">
@@ -290,6 +317,8 @@
 							<option value="3">Marcelo</option>
 							<option value="4">Terceiros</option>
             </select></td>
+            <td>31/07/2020</td>
+						<td>31/07/2020</td>
 					</tr>
 					<tr>					  
 						<td onclick="mostrarDetalhes('2');"  class="bg-gray-300" title="Detalhes"><b><a href="#">88703207820</a></b></td>
@@ -306,6 +335,8 @@
 							<option value="3">Marcelo</option>
 							<option value="4">Terceiros</option>
             </select></td>
+            <td>31/07/2020</td>
+						<td>31/07/2020</td>
 					</tr>
 					<tr>
 						<td onclick="mostrarDetalhes('3');" class="bg-gray-300" title="Detalhes"><b><a href="#">98039395054</a></b></td>
@@ -322,6 +353,8 @@
 							<option value="3">Marcelo</option>
 							<option value="4">Terceiros</option>
             </select></td>
+            <td>31/07/2020</td>
+						<td>31/07/2020</td>
 					</tr>
 					<tr>
 						<td onclick="mostrarDetalhes('4');" class="bg-gray-300" title="Detalhes"><b><a href="#">14064423305</a></b></td>
@@ -338,6 +371,8 @@
 							<option value="3">Marcelo</option>
 							<option value="4">Terceiros</option>
             </select></td>
+            <td>31/07/2020</td>
+						<td>31/07/2020</td>
 					</tr>
 					<tr>
 						<td onclick="mostrarDetalhes('5');" class="bg-gray-300" title="Detalhes"><b><a href="#">32078234400</a></b></td>
@@ -354,6 +389,8 @@
 							<option value="3" selected>Marcelo</option>
 							<option value="4">Terceiros</option>
             </select></td>
+            <td>31/07/2020</td>
+						<td>31/07/2020</td>
 					</tr>
 						<tr>
 						<td onclick="mostrarDetalhes('6');" class="bg-gray-300" title="Detalhes"><b><a href="#">67192124869</a></b></td>
@@ -370,6 +407,8 @@
 							<option value="3">Marcelo</option>
 							<option value="4" selected>Terceiros</option>
             </select></td>
+            <td>31/07/2020</td>
+						<td>31/07/2020</td>
 					</tr>
 				</tbody>
 			</table>
@@ -480,10 +519,11 @@
 		</div>
 			
 		 </div>
-	
+	 <br/>
 		<div class="form-group">
 		 <div align="right">
-			<button type="submit" class="btn btn-primary mb-2" id="btnFechar">Fechar Detalhes</button>
+      <button type="submit" class="btn btn-primary mb-2" id="btnFechar">Fechar Detalhes</button>
+      <button type="submit" class="btn btn-primary mb-2" id="btnAlterar">AlterarAtribuição</button>
 			<button type="submit" class="btn btn-primary mb-2" id="btnVoltarAposNovas">Voltar</button>
 		 </div>	
 		</div>
