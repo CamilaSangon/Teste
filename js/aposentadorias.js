@@ -26,7 +26,9 @@ function mostrarDetalhes(id)
 		$('#cad_04').hide();
 		$('#cad_05').hide();
 		$('#cad_06').hide();
-		$("#btnFechar").show();		
+		$("#btnFechar").show();	
+		$('#modal').attr('data-toggle', 'modal');
+        $('#modal').attr('data-target', '#modal');	
 	}
 	else if (id == "2")
 	{
@@ -38,6 +40,8 @@ function mostrarDetalhes(id)
 		$('#cad_05').hide();
 		$('#cad_06').hide();
 		$("#btnFechar").show();
+		$('#modal').attr('data-toggle', 'modal');
+        $('#modal').attr('data-target', '#modal');
 	}	
 	else if (id == "3")
 	{
@@ -49,6 +53,8 @@ function mostrarDetalhes(id)
 		$('#cad_05').hide();
 		$('#cad_06').hide();
 		$("#btnFechar").show();
+		$('#modal').attr('data-toggle', 'modal');
+        $('#modal').attr('data-target', '#modal');
 	}
    else if (id == "4")
 	{
@@ -60,6 +66,8 @@ function mostrarDetalhes(id)
 		$('#cad_05').hide();
 		$('#cad_06').hide();
 		$("#btnFechar").show();	
+		$('#modal').attr('data-toggle', 'modal');
+        $('#modal').attr('data-target', '#modal');
 	}		
 	 else if (id == "5")
 	{
@@ -70,7 +78,9 @@ function mostrarDetalhes(id)
 		$('#cad_04').hide();
 		$('#cad_05').show();
 		$('#cad_06').hide();
-		$("#btnFechar").show();			
+		$("#btnFechar").show();	
+		$('#modal').attr('data-toggle', 'modal');
+        $('#modal').attr('data-target', '#modal');		
 	}		
 	 else if (id == "6")
 	{
@@ -82,6 +92,8 @@ function mostrarDetalhes(id)
 		$('#cad_05').hide();
 		$('#cad_06').show();
 		$("#btnFechar").show();	
+		$('#modal').attr('data-toggle', 'modal');
+        $('#modal').attr('data-target', '#modal');
 		
 	}else{
 		$('#dvDetalhes').hide();
@@ -92,6 +104,8 @@ function mostrarDetalhes(id)
 		$('#cad_05').hide();
 		$('#cad_06').hide();
 		$("#btnFechar").hide();	
+		//$('#modal').attr('data-toggle', 'modal');
+        //$('#modal').attr('data-target', '#modal');
 	}
 }
 
@@ -134,7 +148,7 @@ $('#btnConsultarHom').click(function(){
 });
 
 // Dashboard - Card - Triagem Inicial
-$(document).ready(function(){
+$(document).ready(function(each){
 $("#dvAposentadoria").hide();
 $("#dvPensoes").hide();	
 	

@@ -296,121 +296,134 @@
         </div>
         </div>		
 			<div class="form-group" id="dvAposentadoria">
-			<div class="table-responsive">
-			<table class="table table-bordered" id="tbAposentadoria" width="100%" cellspacing="0">
-				<thead style="font-size:10pt" >
-					<tr>
-					<th>Nr.Processo</th>
-					<th>Tipo Aposentadoria</th>	
-					<th>DIB</th>
-					<th>Data tramitação ao COMPREV</th>
-					<th>Descrição dos Regimes</th>
-          <th>Usuário/Gestor</th>
-          <th>Data da Atribuição</th>
-          <th>Data da Triagem</th>
-					</tr>
-				</thead>
-				<tbody style="font-size:10pt">
-					 <tr>					    
-						<td class="bg-gray-300">2019.0.123.456-7</td>
-						<td>Tempo de Contribuição</td>
-						<td>26/07/2020 </td>
-						<td>25/07/2020</td>
-            <td>RGPS, OUTROS RPPS</td>
-            <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
-							<option value="0">Selecione</option>
-							<option value="1" selected>Bruna</option>
-							<option value="2">Vanessa</option>
-							<option value="3">Marcelo</option>
-							<option value="4">Terceiros</option>
-            </select></td>
-            <td>24/07/2020</td>
-            <td>24/08/2020</td>
-					</tr>
-					<tr>					  
-						<td class="bg-gray-300">6000.2020/0000226-3</td>
-						<td>Compulsoria e Invalidez</td>
-						<td>05/08/2020</td>
-						<td>04/08/2020</td>
-						<td>RGPS, SPPREV</td>
-						 <td><select name="usuarios" class="custom-select" id="cmbUsuario02">
-							<option value="0">Selecione</option>
-							<option value="1" selected>Bruna</option>
-							<option value="2">Vanessa</option>
-							<option value="3">Marcelo</option>
-							<option value="4">Terceiros</option>
-            </select></td>
-            <td>04/08/2020</td>
-            <td>04/08/2020</td>
-					</tr>
-					<tr>
-						<td class="bg-gray-300">6000.2020/0000226-4</td>
-						<td>idade</td>
-						<td>07/08/2020</td>
-						<td>06/08/2020</td>
-						<td>RGPS</td>
-						<td><select name="usuarios" class="custom-select" id="cmbUsuario03">
-							<option value="0">Selecione</option>
-							<option value="1">Bruna</option>
-							<option value="2" selected>Vanessa</option>
-							<option value="3">Marcelo</option>
-							<option value="4">Terceiros</option>
-            </select></td>
-            <td>04/08/2020</td>
-            <td>04/08/2020</td>
-					</tr>
-					<tr>
-						<td class="bg-gray-300">6000.2020/0000226-5</td>
-						<td>Tempo de Contribuição</td>
-						<td>07/08/2020</td>
-						<td>06/08/2020</td>
-						<td>OUTROS RPPS</td>
-						<td><select name="usuarios" class="custom-select" id="cmbUsuario04">
-							<option value="0">Selecione</option>
-							<option value="1">Bruna</option>
-							<option value="2" selected>Vanessa</option>
-							<option value="3">Marcelo</option>
-							<option value="4">Terceiros</option>
-            </select></td>
-            <td>04/08/2020</td>
-            <td>04/08/2020</td>
-					</tr>
-					<tr>
-						<td class="bg-gray-300">6000.2020/0000226-6</td>
-						<td>idade</td>
-						<td>07/08/2020</td>
-						<td>06/08/2020</td>
-						<td>RGPS</td>
-						<td><select name="usuarios" class="custom-select" id="cmbUsuario05">
-							<option value="0">Selecione</option>
-							<option value="1">Bruna</option>
-							<option value="2">Vanessa</option>
-							<option value="3" selected>Marcelo</option>
-							<option value="4">Terceiros</option>
-            </select></td>
-            <td>04/08/2020</td>
-            <td>04/08/2020</td>
-					</tr>
-						<tr>
-						<td class="bg-gray-300">6000.2020/0000226-7</td>
-						<td>Tempo de Contribuição</td>
-						<td>11/08/2020</td>
-						<td>10/08/2020</td>
-						<td>SPPREV</td>
-						<td><select name="usuarios" class="custom-select" id="cmbUsuario06">
-							<option value="0">Selecione</option>
-							<option value="1">Bruna</option>
-							<option value="2">Vanessa</option>
-							<option value="3">Marcelo</option>
-							<option value="4" selected>Terceiros</option>
-            </select></td>
-            <td>07/08/2020</td>
-            <td>07/08/2020</td>
-					</tr>
-				</tbody>
-			</table>
-			<br/>			
-		 </div>
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead style="font-size:10pt" >
+              <tr>
+              <th class="bg-gray-300">CPF</th>
+              <th>Nr.Processo</th>
+              <th>Tipo Aposentadoria</th>	
+              <th>DIB</th>
+              <th>Valor do Benefício</th>
+              <th>Data tramitação ao COMPREV</th>
+              <th>Descrição dos Regimes</th>
+              <th>Atribuir Processo</th>
+              <th>Data da Atribuição</th>
+              <th>Data da Triagem</th>
+              </tr>
+            </thead>
+            <tbody style="font-size:10pt">
+               <tr>					    
+                <td onclick="mostrarDetalhes('1');" class="bg-gray-300"  title="Detalhes"><b><a href="#">94577520079</a></b></td>
+                <td><a href="cadastro_novo_01.html">2019.0.123.456-7</a></td>
+                <td>Tempo de Contribuição</td>
+                <td>26/07/2020 </td>
+                <td>12.000,00</td>
+                <td>25/07/2020</td>
+                <td>RGPS, OUTROS RPPS</td>
+                <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
+                  <option value="0">Selecione</option>
+                  <option value="1" selected>Bruna</option>
+                  <option value="2">Vanessa</option>
+                  <option value="3">Marcelo</option>
+                  <option value="4">Terceiros</option>
+                </select></td>
+                <td>31/07/2020</td>
+                <td>31/07/2020</td>
+              </tr>
+              <tr>					  
+                <td onclick="mostrarDetalhes('2');"  class="bg-gray-300" title="Detalhes"><b><a href="#">88703207820</a></b></td>
+                <td><a href="cadastro_novo_02.html">6000.2020/0000226-3</a></td>
+                <td>Compulsoria e Invalidez</td>
+                <td>05/08/2020</td>
+                <td>3.000,00</td>
+                <td>04/08/2020</td>
+                <td>RGPS, SPPREV</td>
+                <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
+                  <option value="0">Selecione</option>
+                  <option value="1" selected>Bruna</option>
+                  <option value="2">Vanessa</option>
+                  <option value="3">Marcelo</option>
+                  <option value="4">Terceiros</option>
+                </select></td>
+                <td>31/07/2020</td>
+                <td>31/07/2020</td>
+              </tr>
+              <tr>
+                <td onclick="mostrarDetalhes('3');" class="bg-gray-300" title="Detalhes"><b><a href="#">98039395054</a></b></td>
+                <td><a href="cadastro_novo_03.html">6000.2020/0000226-4</a></td>
+                <td>idade</td>
+                <td>07/08/2020</td>
+                <td>5.000,00</td>
+                <td>06/08/2020</td>
+                <td>RGPS</td>
+                <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
+                  <option value="0">Selecione</option>
+                  <option value="1">Bruna</option>
+                  <option value="2"selected>Vanessa</option>
+                  <option value="3">Marcelo</option>
+                  <option value="4">Terceiros</option>
+                </select></td>
+                <td>31/07/2020</td>
+                <td>31/07/2020</td>
+              </tr>
+              <tr>
+                <td onclick="mostrarDetalhes('4');" class="bg-gray-300" title="Detalhes"><b><a href="#">14064423305</a></b></td>
+                <td><a href="cadastro_novo_04.html">6000.2020/0000226-5</a></td>
+                <td>Tempo de Contribuição</td>
+                <td>07/08/2020</td>
+                <td>6.000,00</td>
+                <td>06/08/2020</td>
+                <td>OUTROS RPPS</td>
+                <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
+                  <option value="0">Selecione</option>
+                  <option value="1">Bruna</option>
+                  <option value="2" selected>Vanessa</option>
+                  <option value="3">Marcelo</option>
+                  <option value="4">Terceiros</option>
+                </select></td>
+                <td>31/07/2020</td>
+                <td>31/07/2020</td>
+              </tr>
+              <tr>
+                <td onclick="mostrarDetalhes('5');" class="bg-gray-300" title="Detalhes"><b><a href="#">32078234400</a></b></td>
+                <td><a href="cadastro_novo_05.html">6000.2020/0000226-6</a></td>
+                <td>idade</td>
+                <td>07/08/2020</td>
+                <td>4.000,00</td>
+                <td>06/08/2020</td>
+                <td>RGPS</td>
+                <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
+                  <option value="0">Selecione</option>
+                  <option value="1">Bruna</option>
+                  <option value="2">Vanessa</option>
+                  <option value="3" selected>Marcelo</option>
+                  <option value="4">Terceiros</option>
+                </select></td>
+                <td>31/07/2020</td>
+                <td>31/07/2020</td>
+              </tr>
+                <tr>
+                <td onclick="mostrarDetalhes('6');" class="bg-gray-300" title="Detalhes"><b><a href="#">67192124869</a></b></td>
+                <td><a href="cadastro_novo_06.html">6000.2020/0000226-7</a></td>
+                <td>Tempo de Contribuição</td>
+                <td>11/08/2020</td>
+                <td>7.000,00</td>
+                <td>10/08/2020</td>
+                <td>SPPREV</td>
+                <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
+                  <option value="0">Selecione</option>
+                  <option value="1">Bruna</option>
+                  <option value="2">Vanessa</option>
+                  <option value="3">Marcelo</option>
+                  <option value="4" selected>Terceiros</option>
+                </select></td>
+                <td>31/07/2020</td>
+                <td>31/07/2020</td>
+              </tr>
+            </tbody>
+          </table>       
+         </div>     
 		 </div>
 		<div class="form-group" id="dvPensoes">
 			<div class="table-responsive">
