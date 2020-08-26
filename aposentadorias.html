@@ -115,7 +115,7 @@
        <hr class="sidebar-divider">
        <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRel" aria-expanded="true" aria-controls="collapseRel">
-           <i class="fas fa-hand-holding-usd"></i>
+          <i class="fas fa-print"></i>
            <span>RELATÓRIOS</span>
          </a>
          <div id="collapseRel" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
@@ -273,12 +273,9 @@
 						<th>Nr.Processo</th>						
 						<th>Tipo Aposentadoria </th>
 						<th>DIB</th>
-						<th>Descrição dos Regimes (agrupar)</th>
-						<th>Estado Atual do Requerimento (agrupar)</th>
 						<th>Data tramitação ao TCM</th>
 						<th>Data da Assinatura da Homologação</th>
 						<th>Data de Publicação da Homologação</th>
-						<th>Atribuído/Usuário</th>
 					</tr>
 				</thead>
 				   <tbody style="font-size:10pt">
@@ -295,16 +292,13 @@
 						<td>Bruna</td>
 					</tr>-->
 					<tr>
-					    <td onclick="mostrarDetalhes('2');" class="bg-gray-300" title="Detalhes">94287087208</td>
+					    <td onclick="mostrarDetalhes('2');" class="bg-gray-300" title="Detalhes" data-toggle="modal" data-target="#modal">94287087208</td>
 						<td><a href="cadastro_hom_02.html">6000.2020/0000233-5</a></td>
 						<td>Tempo de Contribuição</td>							
 						<td>05/08/2020</td>
-						<td>RGPS</td>
-						<td>Compensado</td>	
 						<td>04/08/2020</td>
 						<td>04/08/2020</td>
 						<td>04/08/2020</td>
-						<td>Bruna</td>
 					</tr>
 					<!--<tr>
 					    <td onclick="mostrarDetalhes('3');" class="bg-gray-300" title="Detalhes">62941227679</td>
@@ -316,96 +310,25 @@
 						<td>07/08/2020</td>
 						<td>07/08/2020</td>
 						<td>07/08/2020</td>
-						<td>Vanessa</td>
 					</tr>-->
 					<tr>
-					    <td onclick="mostrarDetalhes('4');" class="bg-gray-300" title="Detalhes">51679152602</td>
+					    <td onclick="mostrarDetalhes('4');" class="bg-gray-300" title="Detalhes" data-toggle="modal" data-target="#modal">51679152602</td>
 						<td><a href="cadastro_hom_04.html">6000.2020/0000235-1</a></td>
 						<td>Tempo de Contribuição</td>							
 						<td>07/08/2020</td>
-						<td>SPPREEV</td>
-						<td>Compensado</td>	
 						<td>06/08/2020</td>
 						<td>06/08/2020</td>
 						<td>06/08/2020</td>
-						<td>Vanessa</td>
 					</tr>						
 				</tbody>
 			</table>
 		   </div>
 		 </div>
 		 <br/>
-		     <div class="card shadow mb-4" id= "dvDetalhes">
-			<div class="card-header py-3">
-				<h6 class="m-0 font-weight-bold text-primary"> <i class="fas fa-info-circle mr-1"></i> Detalhes</h6>
-			</div>
-			<div class="card-body">
-			
-		  <div class="form-group" id="cad_01">
-			 <div class="row">
-				<div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b>  </label></div>
-				<div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> </label></div>
-				<div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
-				<div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>Unidade do Servidor:</b> </label></div>
-			</div>
-			<div class="row">
-				<div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"> 222222 </label></div>
-				<div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"> 201.234.5-6</label></div>
-				<div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"></label></div>
-				<div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"> SMA</label></div>
-			</div>
-			 </div>
-		    <div class="form-group" id="cad_02">
-			 <div class="row">
-				<div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b>  </label></div>
-				<div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> </label></div>
-				<div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
-				<div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>Unidade do Servidor:</b> </label></div>
-				</div>
-				 <div class="row">
-				<div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"> 333333 </label></div>
-				<div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"> 201.346.5-7</label></div>
-				<div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"> </label></div>
-				<div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"> SME </label></div>
-				</div>
-		  </div>
-			<div class="form-group" id="cad_03">
-			 <div class="row">
-				<div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b>  </label></div>
-				<div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> </label></div>
-				<div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
-				<div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>Unidade do Servidor:</b> </label></div>
-				</div>
-				 <div class="row">
-				<div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"> 444444 </label></div>
-				<div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"> 201.456.7-8</label></div>
-				<div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"> </label></div>
-				<div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"> IPREM </label></div>
-				</div>
-		  </div>
-		<div class="form-group" id="cad_04">
-		 <div class="row">
-			<div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b>  </label></div>
-			<div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> </label></div>
-			<div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
-			<div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>Unidade do Servidor:</b> </label></div>
-			</div>
-			 <div class="row">
-			<div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"> 555555 </label></div>
-			<div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"> 201.567.8-9</label></div>
-			<div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"> </label></div>
-			<div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"> PMSP </label></div>
-			</div>
-		  </div>
-        </div>
-		</div>
-            </div>
-			
-          </div>
-
+    </div>			
+    </div>
 		<div class="form-group">
-		 <div align="right">
-			<button type="submit" class="btn btn-primary mb-2" id="btnFechar">Fechar Detalhes</button>
+		 <div align="right">	
 			<button type="submit" class="btn btn-primary mb-2" id="btnVoltarAposentadorias">Voltar</button>
 		 </div>	
 		</div>
@@ -450,6 +373,78 @@
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
           <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Detalhes</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="card shadow mb-4" id= "dvDetalhes">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary"> <i class="fas fa-info-circle mr-1"></i> Detalhes</h6>
+            </div>
+            <div class="card-body">
+              <div class="form-group" id="cad_02">
+                <div class="row">
+                 <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b>  </label></div>
+                 <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> </label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>Unidade do Servidor:</b> </label></div>
+          
+                </div>
+                  <div class="row">
+                 <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"> 333333 </label></div>
+                 <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"> 201.346.5-7</label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"> </label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"> SME </label></div>
+                  </div>
+                  <div class="row">
+                  <div class="col-3" style="font-size:10pt"><label for="regime" class="mr-sm-2"><b>Descrição dos Regimes:</b> </label></div>
+                  <div class="col-6" style="font-size:10pt"><label for="estadoRequerimento" class="mr-sm-2"><b> Estado Atual do Requerimento </b> </label></div>
+                  </div>
+                  <div class="row">
+                 <div class="col-3" style="font-size:10pt"><label for="regime" class="mr-sm-2"> RGPS</label></div>
+                 <div class="col-6" style="font-size:10pt"><label for="estadoRequerimento" class="mr-sm-2"> Compensado</label></div>                
+               </div>
+               </div>
+               <div class="form-group" id="cad_04">
+                <div class="row">
+                 <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b>  </label></div>
+                 <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> </label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>Unidade do Servidor:</b> </label></div>
+                </div>
+                  <div class="row">
+                 <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"> 555555 </label></div>
+                 <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"> 201.567.8-9</label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"> </label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"> PMSP </label></div>
+               </div>
+               <br/>
+               <div class="row">
+               <div class="col-3" style="font-size:10pt"><label for="regime" class="mr-sm-2"><b>Descrição dos Regimes:</b> </label></div>
+               <div class="col-6" style="font-size:10pt"><label for="estadoRequerimento" class="mr-sm-2"><b> Estado Atual do Requerimento </b> </label></div>  
+               </div>
+               <div class="row">
+               <div class="col-3" style="font-size:10pt"><label for="regime" class="mr-sm-2"> SPPREV</label></div>
+               <div class="col-6" style="font-size:10pt"><label for="estadoRequerimento" class="mr-sm-2"> Compensado</label></div>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" data-dismiss="modal" href="#">Ok</a>
         </div>
       </div>
     </div>
