@@ -114,7 +114,7 @@
     <hr class="sidebar-divider">
     <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRel" aria-expanded="true" aria-controls="collapseRel">
-        <i class="fas fa-print"></i>
+        <i class="fas fa-print"></i> 
         <span>RELATÓRIOS</span>
       </a>
       <div id="collapseRel" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
@@ -282,7 +282,14 @@
 				  <label class="form-check-label" for="radio3">
 					<input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4"><b>Triagem Outros RPPS</b>
 				  </label>
-				</div>
+        </div>
+        <select name="usuarios" class="custom-select" id="cmbtriagem">
+          <option value="0">Selecione</option>
+          <option value="1">Todas pensões</option>
+          <option value="2">Triagem RGPS</option>
+          <option value="3">Triagem SPPREV</option>
+          <option value="4">Triagem Outros RPPS</option>
+        </select></div></div>
 				</div>
 			 <div class="form-group">
 			 <div align="right">
@@ -290,10 +297,8 @@
 				<!--<button type="submit" class="btn btn-primary mb-2" id="btnRequerimento"> Formulário</button>-->								
 			 </div>
 			 </div>
-			</div>		
-		  </div>
-		  		  
-          <!-- DataTales Example -->
+					
+		  <!-- DataTales Example -->
           <div class="card shadow mb-4" id="dvTodas">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info-circle mr-1"></i>Dados</h6>
@@ -370,56 +375,9 @@
 		  </div>
             </div>
           </div>
-		  	   <div class="card shadow mb-4" id="dvDetalhes">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info-circle mr-1"></i> DETALHES</h6>
-            </div>
-            <div class="card-body">
-			<div class="form-group" id="cad_01">
-			 <div class="row">
-				<div class="col-4"><label for="nit" class="mr-sm-2"><b>NIT Aposentado:</b> </label></div>				
-			 </div>
-			  <div class="row">
-				<div class="col-4"><label for="matricula" class="mr-sm-2"><b>Matrícula Aposentado:</b> </label></div>
-			  </div>
-			 <div class="row">
-			 <div class="col-4"><label for="vinculo" class="mr-sm-2"><b>Vinculo Aposentado:</b> </label></div>
-			 </div>
-			 <div class="row">
-			 <div class="col-6"><label for="unidade" class="mr-sm-2"><b>Nº Pensão:</b></label></div>
-			 </div>
-			 <div class="row">
-			 <div class="col-6"><label for="tramitacaoComprev" class="mr-sm-2"><b>Data tramitação ao COMPREV:</b></label></div>
-			 </div>
-			 <div class="row">
-			 <div class="col-6"><label for="tramitacaotcm" class="mr-sm-2"><b>Data tramitação ao TCM - Pensão:</b></label></div>
-			 </div>
-			 </div>
-		  <div class="form-group" id="cad_02">
-			 <div class="row">
-				<div class="col-4"><label for="nit" class="mr-sm-2"><b>NIT Aposentado:</b> </label></div>				
-			 </div>
-			  <div class="row">
-				<div class="col-4"><label for="matricula" class="mr-sm-2"><b>Matrícula Aposentado:</b> </label></div>
-			  </div>
-			 <div class="row">
-			 <div class="col-4"><label for="vinculo" class="mr-sm-2"><b>Vinculo Aposentado:</b> </label></div>
-			 </div>
-			 <div class="row">
-			 <div class="col-6"><label for="unidade" class="mr-sm-2"><b>Nº Pensão:</b></label></div>
-			 </div>
-			 <div class="row">
-			 <div class="col-6"><label for="tramitacaoComprev" class="mr-sm-2"><b>Data tramitação ao COMPREV:</b></label></div>
-			 </div>
-			 <div class="row">
-			 <div class="col-6"><label for="tramitacaotcm" class="mr-sm-2"><b>Data tramitação ao TCM - Pensão:</b></label></div>
-			 </div>
-			 </div>
-		  </div>
-			</div>
+
 		<div class="form-group">
 		 <div align="right">
-			<button type="submit" class="btn btn-primary mb-2" id="btnFechar">Fechar Detalhes</button>
 			<button type="submit" class="btn btn-primary mb-2" id="btnVoltarAposentadorias">Voltar</button>
 		 </div>	
 		</div>
@@ -461,6 +419,68 @@
           </button>
         </div>
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Detalhes</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="card shadow mb-4" id="dvDetalhes">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info-circle mr-1"></i> DETALHES</h6>
+            </div>
+            <div class="card-body">
+			<div class="form-group" id="cad_01">
+			 <div class="row">
+        <div class="col-4"><label for="nit" class="mr-sm-2"><b>NIT Aposentado:</b> </label></div>
+        <div class="col-4"><label for="matricula" class="mr-sm-2"><b>Matrícula Aposentado:</b> </label></div>				
+        <div class="col-4"><label for="vinculo" class="mr-sm-2"><b>Vinculo Aposentado:</b> </label></div>
+      </div>
+			<div class="row">
+				
+			</div>
+			<div class="row">
+        <div class="col-6"><label for="unidade" class="mr-sm-2"><b>Nº Pensão:</b></label></div>
+        <div class="col-6"><label for="tramitacaotcm" class="mr-sm-2"><b>Data tramitação ao TCM - Pensão:</b></label></div>
+			 </div>
+			 <div class="row">
+			 </div>
+			 </div>
+		  <div class="form-group" id="cad_02">
+			 <div class="row">
+				<div class="col-4"><label for="nit" class="mr-sm-2"><b>NIT Aposentado:</b> </label></div>				
+        <div class="col-4"><label for="matricula" class="mr-sm-2"><b>Matrícula Aposentado:</b> </label></div>
+ 			 <div class="col-4"><label for="vinculo" class="mr-sm-2"><b>Vinculo Aposentado:</b> </label></div>
+
+      </div>
+			  <div class="row">
+			  </div>
+			 <div class="row">
+        <div class="col-3"><label for="unidade" class="mr-sm-2"><b>Nº Pensão:</b></label></div>
+        <div class="col-6"><label for="tramitacaoComprev" class="mr-sm-2"><b>Data tramitação ao COMPREV:</b></label></div>
+        <div class="col-6"><label for="tramitacaotcm" class="mr-sm-2"><b>Data tramitação ao TCM - Pensão:</b></label></div>
+			 </div>
+			 <div class="row">
+			 </div>
+			 <div class="row">
+			 </div>
+			 </div>
+		  </div>
+			</div>
+          
+        </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
           <a class="btn btn-primary" href="login.html">Logout</a>
