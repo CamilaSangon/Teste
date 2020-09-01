@@ -262,9 +262,25 @@
               <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info-circle mr-1"></i>Novas Concessões de Pensões (Legador Aposentado) </h6>
             </div>
             <div class="card-body">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-4"><label for="Usuario" class="mr-sm-2"><b>Usuário/Gestor:</b> </label></div>
+                  </div>
+                <div class="row">
+                <div class="col-4">
+                <select name="usuarios" class="custom-select" id="cmbUsuario01">
+                  <option value="0">Selecione</option>
+                  <option value="1">Bruna</option>
+                  <option value="2">Vanessa</option>
+                  <option value="3">Marcelo</option>
+                  <option value="4">Terceiros</option>
+                </select>
+              </div>
+            </div>
+            </div> 
 			<div class="form-group">
 					<div class="table-responsive">
-					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+					<table class="table table-bordered" id="tbNovasPensoes" width="100%" cellspacing="0">
 						<thead style="font-size:10pt" >
 							<tr>
 							    <th class="bg-gray-300">CPF Aposentado</th>
@@ -273,7 +289,10 @@
 								<th>Nr.Processo Pensão</th>
 								<th>DIB Pensão</th>
 								<th>Valor do Benefício</th>
-								<th>Data Tramitação COMPREV</th>
+                <th>Data Tramitação COMPREV</th>
+                <th>Atribuição</th>
+                <th>Data da Atribuição</th>
+                <th>Data da Triagem</th>
 							</tr>
 						</thead>
 						 <tbody style="font-size:10pt">
@@ -284,7 +303,16 @@
 								<td><a href="cadastro_pensao_01.html">6000.2020/0000226-2</a></td>
 								<td>31/07/2020</td>
 								<td>2.000,00</td>
-								<td>31/07/2020</td>
+                <td>31/07/2020</td>
+                <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
+                  <option value="0">Selecione</option>
+                  <option value="1">Bruna</option>
+                  <option value="2">Vanessa</option>
+                  <option value="3">Marcelo</option>
+                  <option value="4">Terceiros</option>
+                </select></td>
+                <td>31/07/2020</td>
+                <td>31/07/2020</td>
 							</tr>
 								<tr>
 								<td onclick="mostrarDetalhes('2');" class="bg-gray-300" title="Detalhes" data-toggle="modal" data-target="#modal">31868245080</td>
@@ -293,7 +321,16 @@
 								<td><a href="cadastro_pensao_02.html">6000.2020/0000233-5</a></td>
 								<td>04/08/2020</td>
 								<td>4.000,00</td>
-								<td>31/07/2020</td>
+                <td>31/07/2020</td>
+                <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
+                  <option value="0">Selecione</option>
+                  <option value="1">Bruna</option>
+                  <option value="2">Vanessa</option>
+                  <option value="3">Marcelo</option>
+                  <option value="4">Terceiros</option>
+                </select></td>
+                <td>31/07/2020</td>
+                <td>31/07/2020</td>
 							</tr>
 							<tr>
 								<td onclick="mostrarDetalhes('3');" class="bg-gray-300" title="Detalhes" data-toggle="modal" data-target="#modal">01125424095</td>
@@ -302,7 +339,16 @@
 								<td><a href="cadastro_pensao_03.html">6000.2020/0000235-1</a></td>
 								<td>05/08/2020</td>
 								<td>2.500,00</td>
-								<td>31/07/2020</td>
+                <td>31/07/2020</td>
+                <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
+                  <option value="0">Selecione</option>
+                  <option value="1">Bruna</option>
+                  <option value="2">Vanessa</option>
+                  <option value="3">Marcelo</option>
+                  <option value="4">Terceiros</option>
+                </select></td>
+                <td>31/07/2020</td>
+                <td>31/07/2020</td>
 							</tr>
 							<!--<tr>
 								<td onclick="mostrarDetalhes('4');" class="bg-gray-300" title="Detalhes">89810324081</td>
@@ -373,19 +419,19 @@
   </a>
 
   <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="modal01" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-body">Deseja atribuir o processo para o usuário selecionado</div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          <a class="btn btn-primary" data-dismiss="modal" href="#">Ok</a>
         </div>
       </div>
     </div>

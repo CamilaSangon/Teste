@@ -265,10 +265,25 @@
               <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info-circle mr-1"></i>Novas Concessões de Aposentadorias </h6>
             </div>
             <div class="card-body">
-
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-4"><label for="Usuario" class="mr-sm-2"><b>Usuário/Gestor:</b> </label></div>
+                  </div>
+                <div class="row">
+                <div class="col-4">
+                <select name="usuarios" class="custom-select" id="cmbUsuario01">
+                  <option value="0">Selecione</option>
+                  <option value="1">Bruna</option>
+                  <option value="2">Vanessa</option>
+                  <option value="3">Marcelo</option>
+                  <option value="4">Terceiros</option>
+                </select>
+              </div>
+            </div>
+            </div> 
 			<div class="form-group">
 			<div class="table-responsive">
-			<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+			<table class="table table-bordered" width="100%" cellspacing="0" id="tbNovasAposentadorias">
 				<thead style="font-size:10pt" >
 					<tr>
 					<th class="bg-gray-300">CPF</th>
@@ -278,7 +293,7 @@
 					<th>Valor do Benefício</th>
 					<th>Data tramitação ao COMPREV</th>
 					<th>Descrição dos Regimes</th>
-          <th>Atribuir Processo</th>
+          <th>Atribuição</th>
           <th>Data da Atribuição</th>
           <th>Data da Triagem</th>
 					</tr>
@@ -293,11 +308,11 @@
 						<td>25/07/2020</td>
 						<td>RGPS, OUTROS RPPS</td>
             <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
-							<option value="0">Selecione</option>
-							<option value="1" selected>Bruna</option>
-							<option value="2">Vanessa</option>
-							<option value="3">Marcelo</option>
-							<option value="4">Terceiros</option>
+              <option value="0">Selecione</option>
+              <option value="1">Bruna</option>
+              <option value="2">Vanessa</option>
+              <option value="3">Marcelo</option>
+              <option value="4">Terceiros</option>
             </select></td>
             <td>31/07/2020</td>
 						<td>31/07/2020</td>
@@ -310,12 +325,12 @@
 						<td>3.000,00</td>
 						<td>04/08/2020</td>
 						<td>RGPS, SPPREV</td>
-            <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
-							<option value="0">Selecione</option>
-							<option value="1" selected>Bruna</option>
-							<option value="2">Vanessa</option>
-							<option value="3">Marcelo</option>
-							<option value="4">Terceiros</option>
+            <td><select name="usuarios" class="custom-select" id="cmbUsuario01" >
+              <option value="0">Selecione</option>
+              <option value="1">Bruna</option>
+              <option value="2">Vanessa</option>
+              <option value="3">Marcelo</option>
+              <option value="4">Terceiros</option>
             </select></td>
             <td>31/07/2020</td>
 						<td>31/07/2020</td>
@@ -329,11 +344,11 @@
 						<td>06/08/2020</td>
 						<td>RGPS</td>
             <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
-							<option value="0">Selecione</option>
-							<option value="1">Bruna</option>
-							<option value="2"selected>Vanessa</option>
-							<option value="3">Marcelo</option>
-							<option value="4">Terceiros</option>
+              <option value="0">Selecione</option>
+              <option value="1">Bruna</option>
+              <option value="2">Vanessa</option>
+              <option value="3">Marcelo</option>
+              <option value="4">Terceiros</option>
             </select></td>
             <td>31/07/2020</td>
 						<td>31/07/2020</td>
@@ -347,11 +362,11 @@
 						<td>06/08/2020</td>
 						<td>OUTROS RPPS</td>
             <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
-							<option value="0">Selecione</option>
-							<option value="1">Bruna</option>
-							<option value="2" selected>Vanessa</option>
-							<option value="3">Marcelo</option>
-							<option value="4">Terceiros</option>
+              <option value="0">Selecione</option>
+              <option value="1">Bruna</option>
+              <option value="2">Vanessa</option>
+              <option value="3">Marcelo</option>
+              <option value="4">Terceiros</option>
             </select></td>
             <td>31/07/2020</td>
 						<td>31/07/2020</td>
@@ -365,11 +380,11 @@
 						<td>06/08/2020</td>
 						<td>RGPS</td>
             <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
-							<option value="0">Selecione</option>
-							<option value="1">Bruna</option>
-							<option value="2">Vanessa</option>
-							<option value="3" selected>Marcelo</option>
-							<option value="4">Terceiros</option>
+              <option value="0">Selecione</option>
+              <option value="1">Bruna</option>
+              <option value="2">Vanessa</option>
+              <option value="3">Marcelo</option>
+              <option value="4">Terceiros</option>
             </select></td>
             <td>31/07/2020</td>
 						<td>31/07/2020</td>
@@ -383,11 +398,11 @@
 						<td>10/08/2020</td>
 						<td>SPPREV</td>
             <td><select name="usuarios" class="custom-select" id="cmbUsuario01">
-							<option value="0">Selecione</option>
-							<option value="1">Bruna</option>
-							<option value="2">Vanessa</option>
-							<option value="3">Marcelo</option>
-							<option value="4" selected>Terceiros</option>
+              <option value="0">Selecione</option>
+              <option value="1">Bruna</option>
+              <option value="2">Vanessa</option>
+              <option value="3">Marcelo</option>
+              <option value="4">Terceiros</option>
             </select></td>
             <td>31/07/2020</td>
 						<td>31/07/2020</td>
@@ -432,19 +447,19 @@
   </a>
 
   <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="modal01" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">×</span>
           </button>
         </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-body">Deseja atribuir o processo para o usuário selecionado</div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          <a class="btn btn-primary" data-dismiss="modal" href="#">Ok</a>
         </div>
       </div>
     </div>

@@ -147,6 +147,18 @@ $('#btnConsultarHom').click(function(){
 	
 });
 
+
+	$("#tbNovasAposentadorias>tbody>tr>td").each(function(index, elemento){
+		$(elemento).bind('change', function(){		 
+			$(elemento).find('select').attr('data-toggle', 'modal');
+			$(elemento).find('select').attr('data-target', '#modal01');
+
+		});
+	});
+
+
+
+
 // Dashboard - Card - Triagem Inicial
 $(document).ready(function(each){
 $("#dvAposentadoria").hide();

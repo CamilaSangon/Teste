@@ -19,7 +19,7 @@ function mostrarDetalhes(id)
 		$('#cad_04').hide();
 		$('#cad_05').hide();
 		$('#cad_06').hide();
-		$("#btnFechar").show();		
+			
 	}
 	else if (id == "2")
 	{
@@ -30,7 +30,7 @@ function mostrarDetalhes(id)
 		$('#cad_04').hide();
 		$('#cad_05').hide();
 		$('#cad_06').hide();
-		$("#btnFechar").show();
+		
 	}
 	else if (id == "3")
 	{
@@ -41,7 +41,7 @@ function mostrarDetalhes(id)
 		$('#cad_04').hide();
 		$('#cad_05').hide();
 		$('#cad_06').hide();
-		$("#btnFechar").show();
+		
 	}
 	else if (id == "4")
 	{
@@ -52,7 +52,7 @@ function mostrarDetalhes(id)
 		$('#cad_04').show();
 		$('#cad_05').hide();
 		$('#cad_06').hide();
-		$("#btnFechar").show();
+		
 	}	
 	else if (id == "5")
 	{
@@ -63,7 +63,7 @@ function mostrarDetalhes(id)
 		$('#cad_04').hide();
 		$('#cad_05').show();
 		$('#cad_06').hide();
-		$("#btnFechar").show();
+		
 	}	
 	else if (id == "6")
 	{
@@ -74,7 +74,7 @@ function mostrarDetalhes(id)
 		$('#cad_04').hide();
 		$('#cad_05').hide();
 		$('#cad_06').show();
-		$("#btnFechar").show();
+		
 	}		
 	else{
 		$('#dvDetalhes').hide();
@@ -84,7 +84,7 @@ function mostrarDetalhes(id)
 		$('#cad_04').hide();
 		$('#cad_05').hide();
 		$('#cad_06').hide();
-		$("#btnFechar").hide();	
+		
 	}
 }
 
@@ -127,6 +127,16 @@ $('#btnConsultarHom').click(function(){
 	}
 	
 });
+
+
+$("#tbNovasPensoes>tbody>tr>td").each(function(index, elemento){
+	$(elemento).bind('change', function(){		 
+		$(elemento).find('select').attr('data-toggle', 'modal');
+		$(elemento).find('select').attr('data-target', '#modal01');
+
+	});
+});
+
 
 
 
