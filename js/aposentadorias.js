@@ -14,8 +14,10 @@ $("#btnFechar").click(function(){
 	$("#btnFechar").hide();	
 });
 
-function mostrarDetalhes(id)
+function mostrarDetalhes(id, elemento)
 {
+
+	//$(elemento).removeCss("background-color", "red")
 	//alert(id);
 	if (id == "1")
 	{
@@ -27,8 +29,8 @@ function mostrarDetalhes(id)
 		$('#cad_05').hide();
 		$('#cad_06').hide();
 		$("#btnFechar").show();	
-		$('#modal').attr('data-toggle', 'modal');
-        $('#modal').attr('data-target', '#modal');	
+		$(elemento).addClass('bg-gray-300');
+
 	}
 	else if (id == "2")
 	{
@@ -40,8 +42,8 @@ function mostrarDetalhes(id)
 		$('#cad_05').hide();
 		$('#cad_06').hide();
 		$("#btnFechar").show();
-		$('#modal').attr('data-toggle', 'modal');
-        $('#modal').attr('data-target', '#modal');
+
+
 	}	
 	else if (id == "3")
 	{
@@ -53,8 +55,8 @@ function mostrarDetalhes(id)
 		$('#cad_05').hide();
 		$('#cad_06').hide();
 		$("#btnFechar").show();
-		$('#modal').attr('data-toggle', 'modal');
-        $('#modal').attr('data-target', '#modal');
+		$(elemento).addClass('bg-gray-300');
+		
 	}
    else if (id == "4")
 	{
@@ -66,8 +68,8 @@ function mostrarDetalhes(id)
 		$('#cad_05').hide();
 		$('#cad_06').hide();
 		$("#btnFechar").show();	
-		$('#modal').attr('data-toggle', 'modal');
-        $('#modal').attr('data-target', '#modal');
+		$(elemento).addClass('bg-gray-300');
+	
 	}		
 	 else if (id == "5")
 	{
@@ -79,8 +81,8 @@ function mostrarDetalhes(id)
 		$('#cad_05').show();
 		$('#cad_06').hide();
 		$("#btnFechar").show();	
-		$('#modal').attr('data-toggle', 'modal');
-        $('#modal').attr('data-target', '#modal');		
+		$(elemento).addClass('bg-gray-300');
+			
 	}		
 	 else if (id == "6")
 	{
@@ -92,8 +94,8 @@ function mostrarDetalhes(id)
 		$('#cad_05').hide();
 		$('#cad_06').show();
 		$("#btnFechar").show();	
-		$('#modal').attr('data-toggle', 'modal');
-        $('#modal').attr('data-target', '#modal');
+		$(elemento).addClass('bg-gray-300');
+	
 		
 	}else{
 		$('#dvDetalhes').hide();
@@ -148,15 +150,17 @@ $('#btnConsultarHom').click(function(){
 });
 
 
-	$("#tbNovasAposentadorias>tbody>tr>td").each(function(index, elemento){
-		$(elemento).bind('change', function(){		 
-			$(elemento).find('select').attr('data-toggle', 'modal');
-			$(elemento).find('select').attr('data-target', '#modal01');
-
-		});
-	});
-
-
+var tr = $('table tr');
+tr.on('click', function () {
+    var self = this;
+    tr.each(function(){
+		if(this == self){ 
+		$(this).toggleClass('colorir');
+		mostrarDetalhes(this.id);
+		}
+		else $(this).removeClass('colorir');				
+    })
+});
 
 
 // Dashboard - Card - Triagem Inicial
