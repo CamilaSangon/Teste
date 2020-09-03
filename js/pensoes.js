@@ -1,11 +1,41 @@
-
-$('#dvDetalhes').hide();
-$("#btnFechar").hide();
-
-$("#btnFechar").click(function(){
+$(document).ready(function() {
+	$('#dvDetalhes01').hide();
+	$('#dvDetalhes02').hide();
 	$('#dvDetalhes').hide();
-	$("#btnFechar").hide();	
-});
+	$('#dvTodas').hide();
+	$('#dvRegimes').hide();
+	$('#dv01').hide();
+	$('#dv02').hide();
+	$('#dvDados').hide();
+	CarregaDados();
+	CarregaDadosRegime();
+} );
+
+
+function CarregaDados(){
+	//$('#dataTable tbody').empty();
+	$('#tbTodas').DataTable({
+		"pagingType": "numbers",
+		"searching": true,
+		"info": true,
+		"bLengthChange": false,
+		"pageLength": 10
+	});
+
+}
+
+function CarregaDadosRegime(){
+	//$('#tbRegimes tbody').empty();
+	$('#tbRegimes').DataTable({
+		"pagingType": "numbers",
+		"searching": true,
+		"info": true,
+		"bLengthChange": false,
+		"pageLength": 10
+	});
+
+}
+
 
 function mostrarDetalhes(id)
 {
@@ -13,6 +43,8 @@ function mostrarDetalhes(id)
 	if (id == "1")
 	{
 		$('#dvDetalhes').show();
+		$('#dvDetalhes01').hide();
+		$('#dvDetalhes02').hide();
 		$('#cad_01').show();
 		$('#cad_02').hide();	
 		$('#cad_03').hide();
@@ -24,6 +56,8 @@ function mostrarDetalhes(id)
 	else if (id == "2")
 	{
 		$('#dvDetalhes').show();
+		$('#dvDetalhes01').hide();
+		$('#dvDetalhes02').hide();
 		$('#cad_01').hide();
 		$('#cad_02').show();	
 		$('#cad_03').hide();
@@ -32,9 +66,12 @@ function mostrarDetalhes(id)
 		$('#cad_06').hide();
 		
 	}
+
 	else if (id == "3")
 	{
 		$('#dvDetalhes').show();
+		$('#dvDetalhes01').hide();
+		$('#dvDetalhes02').hide();
 		$('#cad_01').hide();
 		$('#cad_02').hide();	
 		$('#cad_03').show();
@@ -43,41 +80,10 @@ function mostrarDetalhes(id)
 		$('#cad_06').hide();
 		
 	}
-	else if (id == "4")
-	{
-		$('#dvDetalhes').show();
-		$('#cad_01').hide();
-		$('#cad_02').hide();	
-		$('#cad_03').hide();
-		$('#cad_04').show();
-		$('#cad_05').hide();
-		$('#cad_06').hide();
-		
-	}	
-	else if (id == "5")
-	{
-		$('#dvDetalhes').show();
-		$('#cad_01').hide();
-		$('#cad_02').hide();	
-		$('#cad_03').hide();
-		$('#cad_04').hide();
-		$('#cad_05').show();
-		$('#cad_06').hide();
-		
-	}	
-	else if (id == "6")
-	{
-		$('#dvDetalhes').show();
-		$('#cad_01').hide();
-		$('#cad_02').hide();	
-		$('#cad_03').hide();
-		$('#cad_04').hide();
-		$('#cad_05').hide();
-		$('#cad_06').show();
-		
-	}		
+	
 	else{
-		$('#dvDetalhes').hide();
+		$('#dvDetalhes01').hide();
+		$('#dvDetalhes02').hide();
 		$('#cad_01').hide();
 		$('#cad_02').hide();	
 		$('#cad_03').hide();
@@ -89,25 +95,6 @@ function mostrarDetalhes(id)
 }
 
 
-
-
-//Tela - Menu/Benefícios/Pensões 
-$('#dvTodas').hide();
-$('#dvRegimes').hide();
-
-$('#btnConsultar').click(function(){
-	
-	if ($("#radio1").is(":checked"))
-	{
-		$('#dvTodas').show();
-		$('#dvRegimes').hide();
-	}else
-	
-	{	$('#dvTodas').hide();
-		$('#dvRegimes').show();
-	}
-	
-});
 
 
 //Tela - Menu/Homologações/Aposentadoria 
@@ -129,14 +116,76 @@ $('#btnConsultarHom').click(function(){
 });
 
 
-$("#tbNovasPensoes>tbody>tr>td").each(function(index, elemento){
-	$(elemento).bind('change', function(){		 
-		$(elemento).find('select').attr('data-toggle', 'modal');
-		$(elemento).find('select').attr('data-target', '#modal01');
-
-	});
+var tr = $('table tr');
+tr.on('click', function () {
+    var self = this;
+    tr.each(function(){
+		if(this == self){ 
+			$(this).toggleClass('colorir');
+			mostrarDetalhes(this.id);
+		}
+		else{
+			$(this).removeClass('colorir');	
+			//$('#dvDetalhes').hide();
+		} 			
+    })
 });
 
+
+//Tela - Dashboard Cards(Pensões) 
+
+
+$('#btnConsultar').click(function(){
+	//alert($("#cmbBeneficio").val());
+	if ($("#cmbBeneficio").val()=='1')
+	{
+		$('#dvTodas').show();
+		$('#dvRegimes').hide();
+	}else
+	
+	{	$('#dvTodas').hide();
+		$('#dvRegimes').show();
+		
+	}
+	
+});
+
+//Tela - Menu benefícios (Pensões)
+/*$('#btnConsultarBenef').click(function(){
+
+	//alert($("#cmbBeneficio").val());
+	if ($("#cmbBeneficio").val()=='1')
+	{
+		$('#dvDados').show();
+		$('#dv02').show();
+		$('#dvDetalhes').hide();
+		$('#dv01').hide();
+	}else	
+	{	
+		$('#dvDados').show();
+		$('#dvDetalhes').hide();
+		$('#dv01').show();
+		$('#dv02').hide();
+		
+	}
+	
+});*/
+
+$("#cmbBeneficio").change(function(){
+	if ($("#cmbBeneficio").val()=='1')
+	{
+		$('#dvDados').show();
+		$('#dv02').show();		
+		$('#dv01').hide();
+	}else	
+	{	
+		$('#dvDados').show();
+		$('#dv01').show();
+		$('#dv02').hide();
+		
+	}
+
+});
 
 
 

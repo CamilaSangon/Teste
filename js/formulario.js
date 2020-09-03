@@ -69,7 +69,7 @@ $("#entidade").change(function () {
  });
  $(document).ready(function() {
  $('.form-control mb-2 mr-sm-2').each(function(index, elemento){
-	$('elemento').find('text').prop('disabled', true);
+	$('elemento').find('input').prop('disabled', false);
  });
  });
     

@@ -150,11 +150,25 @@
       <hr class="sidebar-divider">
       <!-- Heading -->
 	  <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+     <li class="nav-item">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-table"></i>
           <span> AUDITORIA</span></a>
       </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConfig" aria-expanded="true" aria-controls="collapseConfig" >
+          <i class="fas fa-wrench"></i>
+          <span>CONFIGURAÇÕES</span>
+        </a>
+        <div id="collapseConfig" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="#">Sair</a>
+          </div>
+        </div>
+      </li> 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
@@ -180,36 +194,121 @@
           <!-- Page Heading -->
           <h1 class="h3 mb-2 text-gray-800"> Pensões (Legador aposentado a partir da CF/88) </h1>
           <br/>
-		  <div class="card shadow mb-4">
-		    <div class="card-header py-3">
-			<h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-search mr-1"></i>Filtro de Pesquisa</h6>
-            </div>
-            <div class="card-body">
-			<div class="form-group">
-        <select name="usuarios" class="custom-select" id="cmbtriagem">
-          <option value="0">Selecione</option>
-          <option value="1">Todas pensões</option>
-          <option value="2">Triagem RGPS</option>
-          <option value="3">Triagem SPPREV</option>
-          <option value="4">Triagem Outros RPPS</option>
-        </select></div></div>
-				</div>
-			 <div class="form-group">
-			 <div align="right">
-				<button type="submit" class="btn btn-primary mb-2" id="btnConsultar"> Consultar</button>	
-				<!--<button type="submit" class="btn btn-primary mb-2" id="btnRequerimento"> Formulário</button>-->								
-			 </div>
-			 </div>
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-search mr-1"></i>Filtro de Pesquisa</h6>
+                </div>
+                <div class="card-body">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-4"><label for="beneficio" class="mr-sm-2"><b>Escolha o tipo de triagem:</b> </label></div>
+              </div>	
+              <div class="row">
+                <div class="col-4">
+                <select name="beneficio" class="custom-select" id="cmbBeneficio"> 
+                  <option value="0" selected>Selecione</option>
+                  <option value="1">Todas as Pensões</option>
+                  <option value="2">Triagem RGPS</option>
+                  <option value="3">Triagem SPPREV</option>
+                  <option value="4">Triagem Outros RPPS</option>
+                </select></div>
+              </div>
+           <div class="form-group">
+           <div align="right">
+            <button type="submit" class="btn btn-primary mb-2" id="btnConsultarBenef"> Consultar</button>	
+            <!--<button type="submit" class="btn btn-primary mb-2" id="btnRequerimento"> Formulário</button>-->								
+           </div>
+           </div>
+          </div>		
+          </div>
+        </div>
 					
 		  <!-- DataTales Example -->
-          <div class="card shadow mb-4" id="dvTodas">
-            <div class="card-header py-3">
+      <div class="card shadow mb-4" id="dvDados">
+          <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info-circle mr-1"></i>Dados</h6>
-            </div>
+          </div>
             <div class="card-body">
 		<div class="form-group">
-			<div class="table-responsive">
-				<table class="table table-bordered" id="dataTable3" width="100%" cellspacing="0">
+      <div class="table-responsive" id="dv01">
+				<table class="table table-bordered" id="tbRegimes" width="100%" cellspacing="0" >
+					<thead style="font-size:10pt" >
+						<tr id="1">
+							<th class="bg-gray-300">CPF Aposentado</th> 
+							<th>Estado Atual da Aposentadoria </th>
+							<th>Descrição do Regime </th>
+							<th>% de Participação do Regime</th>
+							<th>N° Processo Pensão</th>
+							<th>DIB Pensão</th>
+							<th>Estado Atual do Requerimento de Pensão</th>
+							<th>Data da Assinatura da Homologação - Pensão</th>
+							<th>Data de Publicação da Homologação - Pensão</th>
+						</tr>
+					</thead>
+					<tbody style="font-size:10pt" >
+					<tr id="1">
+					<td>31620786010</td>
+					<td>Compensado</td>
+          <td>RGPS</td>
+          <td>10%</td>
+					<td>6000.2020/0000396-0</td>
+					<td>27/08/2020</td>
+					<td>Compensado</td>
+					<td>26/08/2020</td>
+					<td>26/08/2020</td>
+          </tr>
+          <tr id="2">
+            <td>88048577062</td>
+            <td>Compensado</td>
+            <td>SPPREV</td>
+            <td>12%</td>
+            <td>6000.2020/0000395-1</td>
+            <td></td>
+            <td>Em análise</td>
+            <td></td>
+            <td></td>
+            </tr>
+					</tbody>
+        </table>
+        <br/>
+        <div class="card shadow mb-4" id="dvDetalhes01">
+          <!-- Card Header - Accordion -->
+          <a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample1">
+            <h6 class="m-0 font-weight-bold text-primary">Detalhes</h6>
+          </a>
+          <!-- Card Content - Collapse -->
+          <div class="collapse show" id="collapseCardExample1">
+          <div class="card-body">
+          <div class="form-group" id="cad_01">
+          <div class="row">
+            <div class="col-4" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT Aposentado:</b> 9999999 </label></div>
+            <div class="col-4" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula Aposentado:</b> 999999</label></div>				
+            <div class="col-4" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo Aposentado:</b> 1</label></div>
+          </div>
+          <div class="row">
+            <div class="col-4" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>Nº Pensão:</b> 180394</label></div>
+            <div class="col-4" style="font-size:10pt"><label for="tramitacaoComprev" class="mr-sm-2"><b>Data tramitação ao COMPREV:</b></label></div>
+            <div class="col-4" style="font-size:10pt"><label for="tramitacaotcm" class="mr-sm-2"><b>Data tramitação ao TCM - Pensão:</b></label></div>
+          </div>
+           </div>
+          <div class="form-group" id="cad_02">
+            <div class="row">
+            <div class="col-4" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT Aposentado:</b> 9999999 </label></div>				
+            <div class="col-4" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula Aposentado:</b> 9999999 </label></div>
+            <div class="col-4" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo Aposentado:</b> 2 </label></div>
+          </div>
+          <div class="row">
+            <div class="col-4" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>Nº Pensão:</b> 180393</label></div>
+            <div class="col-4" style="font-size:10pt"><label for="tramitacaoComprev" class="mr-sm-2"><b>Data tramitação ao COMPREV:</b></label></div>
+            <div class="col-4" style="font-size:10pt"><label for="tramitacaotcm" class="mr-sm-2"><b>Data tramitação ao TCM - Pensão:</b></label></div>
+          </div>
+         </div>
+        </div>
+      </div>
+      </div>
+      </div>
+			<div class="table-responsive" id="dv02">
+				<table class="table table-bordered" id="tbTodas" width="100%" cellspacing="0">
 					<thead style="font-size:10pt" >
 						<tr>
 							<th class="bg-gray-300">CPF Aposentado</th> 
@@ -223,7 +322,7 @@
 						</tr>
 					</thead>
 					<tbody style="font-size:10pt" >
-            <tr>
+            <tr id="1">
               <td>31620786010</td>
               <td>Compensado</td>
               <td>RGPS</td>
@@ -233,7 +332,7 @@
               <td>26/08/2020</td>
               <td>26/08/2020</td>
               </tr>
-            <tr>
+            <tr id="2">
                 <td>88048577062</td>
                 <td>Compensado</td>
                 <td>SPPREV</td>
@@ -244,75 +343,63 @@
                 <td></td>
             </tr>
 					</tbody>
-				</table>
-			</div>
-		  </div>
-            </div>
+        </table>
+        <br/>
+        <div class="card shadow mb-4" id="dvDetalhes02">
+          <!-- Card Header - Accordion -->
+          <a href="#collapseCardExample2" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample2">
+            <h6 class="m-0 font-weight-bold text-primary">Detalhes</h6>
+          </a>
+          <!-- Card Content - Collapse -->
+          <div class="collapse show" id="collapseCardExample2">
+          <div class="card-body">
+          <div class="form-group" id="cad_01">
+          <div class="row">
+            <div class="col-4" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT Aposentado:</b> 9999999 </label></div>
+            <div class="col-4" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula Aposentado:</b> 999999</label></div>				
+            <div class="col-4" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo Aposentado:</b> 1</label></div>
           </div>
-		<div class="card shadow mb-4" id="dvRegimes">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info-circle mr-1"></i>Dados</h6>
-            </div>
-            <div class="card-body">
-		<div class="form-group">
-			<div class="table-responsive">
-				<table class="table table-bordered" id="dataTable4" width="100%" cellspacing="0">
-					<thead style="font-size:10pt" >
-						<tr>
-							<th class="bg-gray-300">CPF Aposentado</th> 
-							<th>Estado Atual da Aposentadoria </th>
-							<th>Descrição do Regime </th>
-							<th>% de Participação do Regime</th>
-							<th>N° Processo Pensão</th>
-							<th>DIB Pensão</th>
-							<th>Estado Atual do Requerimento de Pensão</th>
-							<th>Data da Assinatura da Homologação - Pensão</th>
-							<th>Data de Publicação da Homologação - Pensão</th>
-						</tr>
-					</thead>
-					<tbody style="font-size:10pt" >
-					<tr>
-					<td>31620786010</td>
-					<td>Compensado</td>
-					<td>RGPS</td>
-					<td>6000.2020/0000396-0</td>
-					<td>27/08/2020</td>
-					<td>Compensado</td>
-					<td>26/08/2020</td>
-					<td>26/08/2020</td>
-          </tr>
-          <tr>
-            <td>88048577062</td>
-            <td>Compensado</td>
-            <td>SPPREV</td>
-            <td>6000.2020/0000395-1</td>
-            <td></td>
-            <td>Em análise</td>
-            <td></td>
-            <td></td>
-            </tr>
-					</tbody>
-				</table>
-			</div>
-		  </div>
-            </div>
+          <div class="row">
+            <div class="col-4" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>Nº Pensão:</b> 180394</label></div>
+            <div class="col-4" style="font-size:10pt"><label for="tramitacaoComprev" class="mr-sm-2"><b>Data tramitação ao COMPREV:</b></label></div>
+            <div class="col-4" style="font-size:10pt"><label for="tramitacaotcm" class="mr-sm-2"><b>Data tramitação ao TCM - Pensão:</b></label></div>
           </div>
-		<div class="form-group">
-		 <div align="right">
-			<button type="submit" class="btn btn-primary mb-2" id="btnVoltarAposentadorias">Voltar</button>
-		 </div>	
-		</div>
+           </div>
+          <div class="form-group" id="cad_02">
+            <div class="row">
+            <div class="col-4" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT Aposentado:</b> 9999999 </label></div>				
+            <div class="col-4" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula Aposentado:</b> 9999999 </label></div>
+            <div class="col-4" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo Aposentado:</b> 2 </label></div>
+          </div>
+          <div class="row">
+            <div class="col-4" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>Nº Pensão:</b> 180393</label></div>
+            <div class="col-4" style="font-size:10pt"><label for="tramitacaoComprev" class="mr-sm-2"><b>Data tramitação ao COMPREV:</b></label></div>
+            <div class="col-4" style="font-size:10pt"><label for="tramitacaotcm" class="mr-sm-2"><b>Data tramitação ao TCM - Pensão:</b></label></div>
+          </div>
+         </div>
         </div>
+      </div>
+      </div>
+      </div>
+      
+    </div>
+    </div>
+    </div>
+      <div class="form-group">
+          <div align="right">
+           <button type="submit" class="btn btn-primary mb-2" id="btnVoltarAposentadorias">Voltar</button>
+          </div>	
+         </div>
         <!-- /.container-fluid -->
 
       </div>
       <!-- End of Main Content -->
 
       <!-- Footer -->
-     <footer class="sticky-footer bg-white">
+   <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>PRODAM</span>
+            <span>PRODAM - IPREM</span>
           </div>
         </div>
       </footer>
@@ -348,60 +435,6 @@
     </div>
   </div>
 
-  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Detalhes</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="card shadow mb-4" id="dvDetalhes">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info-circle mr-1"></i> DETALHES</h6>
-            </div>
-            <div class="card-body">
-			<div class="form-group" id="cad_01">
-			 <div class="row">
-        <div class="col-4"><label for="nit" class="mr-sm-2"><b>NIT Aposentado:</b> 9999999 </label></div>
-        <div class="col-4"><label for="matricula" class="mr-sm-2"><b>Matrícula Aposentado:</b> 999999</label></div>				
-        <div class="col-4"><label for="vinculo" class="mr-sm-2"><b>Vinculo Aposentado:</b> 1</label></div>
-      </div>
-			<div class="row">
-        <div class="col-6"><label for="unidade" class="mr-sm-2"><b>Nº Pensão:</b> 180394</label></div>
-        <div class="col-6"><label for="tramitacaotcm" class="mr-sm-2"><b>Data tramitação ao TCM - Pensão:</b></label></div>
-			 </div>
-			 </div>
-		  <div class="form-group" id="cad_02">
-			 <div class="row">
-				<div class="col-4"><label for="nit" class="mr-sm-2"><b>NIT Aposentado:</b> 9999999 </label></div>				
-        <div class="col-4"><label for="matricula" class="mr-sm-2"><b>Matrícula Aposentado:</b> 9999999 </label></div>
- 			 <div class="col-4"><label for="vinculo" class="mr-sm-2"><b>Vinculo Aposentado:</b> 2 </label></div>
-      </div>
-			 <div class="row">
-        <div class="col-3"><label for="unidade" class="mr-sm-2"><b>Nº Pensão:</b> 180393</label></div>
-        <div class="col-6"><label for="tramitacaoComprev" class="mr-sm-2"><b>Data tramitação ao COMPREV:</b></label></div>
-        <div class="col-6"><label for="tramitacaotcm" class="mr-sm-2"><b>Data tramitação ao TCM - Pensão:</b></label></div>
-			 </div>
-			 <div class="row">
-			 </div>
-			 <div class="row">
-			 </div>
-			 </div>
-		  </div>
-			</div>
-          
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -411,7 +444,7 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
-  <script src="js/aposentadorias.js"></script>
+  <script src="js/pensoes.js"></script>
 
   <!-- Page level plugins -->
   <script src="vendor/datatables/jquery.dataTables.min.js"></script>

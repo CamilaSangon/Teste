@@ -150,11 +150,25 @@
       <hr class="sidebar-divider">
       <!-- Heading -->
 	  <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+     <li class="nav-item">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-table"></i>
           <span> AUDITORIA</span></a>
       </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConfig" aria-expanded="true" aria-controls="collapseConfig" >
+          <i class="fas fa-wrench"></i>
+          <span>CONFIGURAÇÕES</span>
+        </a>
+        <div id="collapseConfig" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="#">Sair</a>
+          </div>
+        </div>
+      </li> 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
@@ -203,10 +217,10 @@
             </div> 
 			<div class="form-group">
 					<div class="table-responsive">
-					<table class="table table-bordered" id="tbNovasPensoes" width="100%" cellspacing="0">
+					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 						<thead style="font-size:10pt" >
 							<tr>
-							    <th class="bg-gray-300">CPF Aposentado</th>
+							  <th>CPF Aposentado</th>
 								<th>Descrição dos Regimes (agrupar)</th>
 								<th>Estado Atual da Aposentadoria (agrupar)</th>
 								<th>Nr.Processo Pensão</th>
@@ -219,8 +233,8 @@
 							</tr>
 						</thead>
 						 <tbody style="font-size:10pt">
-							<tr>
-								<td onclick="mostrarDetalhes('1');" class="bg-gray-300" title="Detalhes" data-toggle="modal" data-target="#modal">99685998086</td>
+							<tr id="1">
+								<td title="Detalhes">99685998086</td>
 								<td>RGPS</td>
 								<td>Compensado </td>
 								<td><a href="cadastro_pensao_01.html">6000.2020/0000226-2</a></td>
@@ -237,8 +251,8 @@
                 <td>31/07/2020</td>
                 <td>31/07/2020</td>
 							</tr>
-								<tr>
-								<td onclick="mostrarDetalhes('2');" class="bg-gray-300" title="Detalhes" data-toggle="modal" data-target="#modal">31868245080</td>
+								<tr id="2">
+								<td title="Detalhes">31868245080</td>
 								<td>SPPREV</td>
 								<td>Compensado</td>
 								<td><a href="cadastro_pensao_02.html">6000.2020/0000233-5</a></td>
@@ -255,8 +269,8 @@
                 <td>31/07/2020</td>
                 <td>31/07/2020</td>
 							</tr>
-							<tr>
-								<td onclick="mostrarDetalhes('3');" class="bg-gray-300" title="Detalhes" data-toggle="modal" data-target="#modal">01125424095</td>
+							<tr id="3">
+								<td title="Detalhes">01125424095</td>
 								<td>OUTROS RPPS</td>
 								<td>Compensado</td>
 								<td><a href="cadastro_pensao_03.html">6000.2020/0000235-1</a></td>
@@ -304,7 +318,73 @@
 								<td>Terceiros</td>
 							</tr>-->								
 						</tbody>
-					</table>
+          </table>
+          <br/>
+          <div class="card shadow mb-4" id="dvDetalhes">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+              <h6 class="m-0 font-weight-bold text-primary">Detalhes</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse show" id="collapseCardExample">
+            <div class="card-body">
+            <div class="form-group" id="cad_01">
+             <div class="row">
+              <div class="col-3" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT do Aposentado: </b> 666666 </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula do Aposentado: </b> 109.327.8-9  </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo do Aposentado:</b> </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="numpensao" class="mr-sm-2"><b>Data Autuação: </b> 31/07/2020 </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>Nº da pensão: </b> 209824 </label></div>
+            </div>
+            </div>
+            <div class="form-group" id="cad_02">
+             <div class="row">
+              <div class="col-3" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT do Aposentado: </b> 777777 </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula do Aposentado: </b> 109.327.7-6  </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo do Aposentado: </b>  </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="numpensao" class="mr-sm-2"><b>Data Autuação: </b> 04/08/2020 </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>Nº da pensão: </b> 209825 </label></div>
+            </div>
+            </div>
+            <div class="form-group" id="cad_03">
+             <div class="row">
+              <div class="col-3" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT do Aposentado: </b>  888888 </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula do Aposentado: </b> 109.327.6-5  </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo do Aposentado:</b> </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="numpensao" class="mr-sm-2"><b>Data Autuação: </b> 05/08/2020 </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>Nº da pensão: </b> 209826 </label></div>
+            </div>
+            </div>
+            <div class="form-group" id="cad_04">
+             <div class="row">
+              <div class="col-3" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT do Aposentado: </b>  999999 </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula do Aposentado: </b> 109.327.5-4  </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo do Aposentado:</b> </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="numpensao" class="mr-sm-2"><b>Data Autuação: </b> 06/08/2020 </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>Nº da pensão: </b> 209827 </label></div>
+            </div>
+            </div>
+            <div class="form-group" id="cad_05">
+             <div class="row">
+              <div class="col-3" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT do Aposentado: </b> 101010 </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula do Aposentado: </b> 109.327.4-3  </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo do Aposentado: </b> </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="numpensao" class="mr-sm-2"><b>Data Autuação: </b> 07/08/2020 </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>Nº da pensão: </b> 209828 </label></div>
+            </div>
+            </div>
+            <div class="form-group" id="cad_06">
+             <div class="row">
+              <div class="col-3" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT do Aposentado: </b> 111111 </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula do Aposentado: </b> 109.327.2-1  </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo do Aposentado:</b> </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="numpensao" class="mr-sm-2"><b>Data Autuação: </b> 10/08/2020 </label></div>
+              <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>Nº da pensão: </b> 209829  </label></div>
+            </div>
+            </div>	
+              </div>
+            </div>
+          </div>
 				   </div>  
 				 </div>
             </div>	
@@ -321,10 +401,10 @@
       <!-- End of Main Content -->
 
       <!-- Footer -->
-     <footer class="sticky-footer bg-white">
+   <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>PRODAM</span>
+            <span>PRODAM - IPREM</span>
           </div>
         </div>
       </footer>
@@ -370,109 +450,7 @@
           </button>
         </div>
         <div class="modal-body"> 
-          <div class="card shadow mb-4" id="dvDetalhes">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary"> <i class="fas fa-info-circle mr-1"></i> DETALHES</h6>
-            </div>
-            <div class="card-body">
-            <div class="form-group" id="cad_01">
-             <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT do Aposentado:</b> </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula do Aposentado:</b>  </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo do Aposentado:</b> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="numpensao" class="mr-sm-2"><b>Data Autuação:</b> </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>Nº da pensão:</b> </label></div>
-            </div>
-            <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"> 666666</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"> 109.327.8-9</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"> 31/07/2020</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2">  209824 </label></div>
-            </div>
-            </div>
-            <div class="form-group" id="cad_02">
-             <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT do Aposentado:</b> </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula do Aposentado:</b>  </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo do Aposentado:</b> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="numpensao" class="mr-sm-2"><b>Data Autuação:</b> </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>Nº da pensão:</b> </label></div>
-            </div>
-            <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"> 777777</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"> 109.327.7-6</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"> 04/08/2020</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2">  209825 </label></div>
-            </div>
-            </div>
-            <div class="form-group" id="cad_03">
-             <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT do Aposentado:</b> </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula do Aposentado:</b>  </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo do Aposentado:</b> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="numpensao" class="mr-sm-2"><b>Data Autuação:</b> </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>Nº da pensão:</b> </label></div>
-            </div>
-            <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"> 888888</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"> 109.327.6-5</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"> 05/08/2020</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2">  209826 </label></div>
-            </div>
-            </div>
-            <div class="form-group" id="cad_04">
-             <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT do Aposentado:</b> </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula do Aposentado:</b>  </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo do Aposentado:</b> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="numpensao" class="mr-sm-2"><b>Data Autuação:</b> </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>Nº da pensão:</b> </label></div>
-            </div>
-            <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"> 999999</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"> 109.327.5-4</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"> 06/08/2020</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2">  209827 </label></div>
-            </div>
-            </div>
-            <div class="form-group" id="cad_05">
-             <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT do Aposentado:</b> </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula do Aposentado:</b>  </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo do Aposentado:</b> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="numpensao" class="mr-sm-2"><b>Data Autuação:</b> </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>Nº da pensão:</b> </label></div>
-            </div>
-            <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"> 101010</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"> 109.327.4-3</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"> 07/08/2020</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2">  209828 </label></div>
-            </div>
-            </div>
-            <div class="form-group" id="cad_06">
-             <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT do Aposentado:</b> </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula do Aposentado:</b>  </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo do Aposentado:</b> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="numpensao" class="mr-sm-2"><b>Data Autuação:</b> </label></div>
-              <div class="col-2" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>Nº da pensão:</b> </label></div>
-            </div>
-            <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"> 111111</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"> 109.327.2-1</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"> 10/08/2020</label></div>
-              <div class="col-2" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2">  209829 </label></div>
-            </div>
-            </div>	
-              </div>
-          </div>
+    
 
         </div>
         <div class="modal-footer">

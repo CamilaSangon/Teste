@@ -150,11 +150,25 @@
       <hr class="sidebar-divider">
       <!-- Heading -->
 	  <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+     <li class="nav-item">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-table"></i>
           <span> AUDITORIA</span></a>
       </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConfig" aria-expanded="true" aria-controls="collapseConfig" >
+          <i class="fas fa-wrench"></i>
+          <span>CONFIGURAÇÕES</span>
+        </a>
+        <div id="collapseConfig" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="#">Sair</a>
+          </div>
+        </div>
+      </li> 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
@@ -203,8 +217,8 @@
 						</tr>
 					</thead>
           <tbody style="font-size:10pt">
-            <tr>						
-						<td onclick="mostrarDetalhes('1');" class="bg-gray-300" title="Detalhes" data-toggle="modal" data-target="#modal">94577520079</td>   
+            <tr id="1">						
+						<td title="Detalhes">94577520079</td>   
             <td>RGPS, OUTROS RPPS</td>  
 						<td>10%</td>
 						<td>Compensado</td>
@@ -214,8 +228,8 @@
 						<td>17/08/2020</td>
 						<td>14.000,00</td>
 						</tr>
-						<tr>
-						<td onclick="mostrarDetalhes('2');" class="bg-gray-300" title="Detalhes" data-toggle="modal" data-target="#modal">28852023003</td> 
+						<tr id="2">
+						<td title="Detalhes">28852023003</td> 
 						<td>RGPS, OUTROS RPPS</td> 
 					  <td>8%</td>
 						<td>Compensado</td>
@@ -225,8 +239,8 @@
 						<td>17/08/2020</td>
 						<td>9.000,00</td>
 						</tr>
-						<tr>
-						<td onclick="mostrarDetalhes('3');" class="bg-gray-300" title="Detalhes" data-toggle="modal" data-target="#modal">35034028026</td>
+						<tr id="3">
+						<td  title="Detalhes" >35034028026</td>
             <td>RGPS</td> 
 						<td>5%</td>
 						<td>Compensado</td>
@@ -236,8 +250,8 @@
 						<td>17/08/2020</td>
 						<td>3.000,00</td>
 						</tr>
-						<tr>
-						<td  onclick="mostrarDetalhes('4');" class="bg-gray-300" title="Detalhes" data-toggle="modal" data-target="#modal">64670501003</td> 
+						<tr id="4">
+						<td title="Detalhes">64670501003</td> 
 						<td>OUTROS RPPS</td>
 						<td>10%</td>						                                          
 						<td>Em Análise </td>
@@ -247,8 +261,8 @@
 						<td></td>
 						<td>8.000,00</td>
 						</tr>
-						<tr>
-						<td onclick="mostrarDetalhes('5');" class="bg-gray-300" title="Detalhes" data-toggle="modal" data-target="#modal">88809780043</td> 
+						<tr id="5">
+						<td title="Detalhes">88809780043</td> 
 						<td>RGPS</td>
 						<td>20%</td>
 						<td>Indeferido</td>
@@ -258,8 +272,8 @@
 						<td></td>
 						<td>-</td>
 						</tr>
-						<tr>
-						<td onclick="mostrarDetalhes('6');" class="bg-gray-300" title="Detalhes" data-toggle="modal" data-target="#modal">20719170060</td> 
+						<tr id="6">
+						<td title="Detalhes">20719170060</td> 
 						<td>RGPS, OUTROS RPPS</td>
 						<td>15%</td>
 						<td>Compensado</td>
@@ -270,7 +284,68 @@
 						<td>12.000,00</td>
 						</tr>					
 					</tbody>
-				</table>
+        </table>
+        <br/>
+        <div class="card shadow mb-4" id="dvDetalhes">
+          <!-- Card Header - Accordion -->
+          <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+            <h6 class="m-0 font-weight-bold text-primary">Detalhes</h6>
+          </a>
+          <!-- Card Content - Collapse -->
+          <div class="collapse show" id="collapseCardExample">
+            <div class="card-body">
+              <div class="form-group" id="cad_01">
+                <div class="row">
+                 <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> 111111</label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> 120.456.8-1</label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>DIB:</b> 17/08/2020 </label></div>
+                 </div>
+               </div>
+               <div class="form-group" id="cad_02">
+                <div class="row">
+                 <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> 222222 </label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> 200.456.9-1</label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>DIB:</b> 17/08/2020  </label></div>
+                </div>
+                </div>
+                <div class="form-group" id="cad_03">
+                <div class="row">
+                 <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> 333333 </label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> 109.320.8-1</label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>DIB:</b> 17/08/2020 </label></div>      
+               </div>
+               </div>
+             <div class="form-group" id="cad_04">
+                <div class="row">
+                 <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> 444444 </label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> 654.321.8-1</label></div>				
+                 <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
+                 <div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>DIB:</b> </label></div>
+               </div>
+               </div>
+               <div class="form-group" id="cad_05">
+                 <div class="row">
+                  <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> 555555 </label></div>
+                  <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> 654.322.5-1</label></div>				
+                  <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
+                  <div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>DIB:</b> </label></div>
+                </div>
+                </div>
+                <div class="form-group" id="cad_06">
+                 <div class="row">
+                  <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> 666666 </label></div>
+                  <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> 650.323.3-1</label></div>				
+                  <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
+                  <div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>DIB:</b> </label></div>
+                </div>
+                </div>
+            </div>
+          </div>
+        </div>
+ 
 			</div>
 		  </div>
             </div>
@@ -288,10 +363,10 @@
       <!-- End of Main Content -->
 
       <!-- Footer -->
-     <footer class="sticky-footer bg-white">
+   <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>PRODAM</span>
+            <span>PRODAM - IPREM</span>
           </div>
         </div>
       </footer>
@@ -337,60 +412,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <div class="card shadow mb-4" id="dvDetalhes">
-            <div class="card-header py-3">
-            </div>
-            <div class="card-body">
-            <div class="form-group" id="cad_01">
-             <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> 111111</label></div>
-              <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> 120.456.8-1</label></div>
-              <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>DIB:</b> 17/08/2020 </label></div>
-              </div>
-            </div>
-            <div class="form-group" id="cad_02">
-             <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> 222222 </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> 200.456.9-1</label></div>
-              <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>DIB:</b> 17/08/2020  </label></div>
-             </div>
-             </div>
-             <div class="form-group" id="cad_03">
-             <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> 333333 </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> 109.320.8-1</label></div>
-              <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="dtAutuacao" class="mr-sm-2"><b>DIB:</b> 17/08/2020 </label></div>      
-            </div>
-            </div>
-          <div class="form-group" id="cad_04">
-             <div class="row">
-              <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> 444444 </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> 654.321.8-1</label></div>				
-              <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
-              <div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>DIB:</b> </label></div>
-            </div>
-            </div>
-            <div class="form-group" id="cad_05">
-              <div class="row">
-               <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> 555555 </label></div>
-               <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> 654.322.5-1</label></div>				
-               <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
-               <div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>DIB:</b> </label></div>
-             </div>
-             </div>
-             <div class="form-group" id="cad_06">
-              <div class="row">
-               <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> 666666 </label></div>
-               <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> 650.323.3-1</label></div>				
-               <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
-               <div class="col-3" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>DIB:</b> </label></div>
-             </div>
-             </div>
-              </div>
-          </div>
+        
         </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
@@ -408,7 +430,7 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/aposentadorias.js"></script>
+  <script src="js/requerimento.js"></script>
   <script src="js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->

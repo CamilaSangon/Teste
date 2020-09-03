@@ -33,10 +33,12 @@
         <div class="sidebar-brand-icon rotate-n-15">		
           <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
         </div>
-		<div class="sidebar-brand-text mx-3">IPREM</div>
+    <div class="sidebar-brand-text mx-3">IPREM</div>
+   
       </a>
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
+
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
@@ -44,9 +46,8 @@
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>COMPREV/IPREM</span></a>
       </li>
-
-      <!-- Divider -->
-      <hr class="sidebar-divider">
+    <!-- Divider -->
+    <hr class="sidebar-divider">
 
       <!-- Heading -->
 	  <li class="nav-item">
@@ -146,12 +147,26 @@
 	 <!-- Divider -->
       <hr class="sidebar-divider">
       <!-- Heading -->
-	  <!-- Nav Item - Tables -->
+	 <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-table"></i>
           <span> AUDITORIA</span></a>
       </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConfig" aria-expanded="true" aria-controls="collapseConfig" >
+          <i class="fas fa-wrench"></i>
+          <span>CONFIGURAÇÕES</span>
+        </a>
+        <div id="collapseConfig" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="#">Sair</a>
+          </div>
+        </div>
+      </li> 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
@@ -257,11 +272,11 @@
 
             <!-- Pending Requests Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-secondary shadow h-100 py-2">
+              <div class="card border-left-warning shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Novas <br/> Homologações <br/>Pensões - Mensal</div>
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Novas <br/> Homologações <br/>Pensões - Mensal</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="pensoes_hom.html">2</a></div>
                     </div>
                     <div class="col-auto">
@@ -355,7 +370,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>PRODAM</span>
+            <span>PRODAM - IPREM</span>
           </div>
         </div>
       </footer>

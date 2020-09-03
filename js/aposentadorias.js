@@ -7,14 +7,9 @@ $("#btnVoltarAposNovas").click(function () {
 });
 
 $('#dvDetalhes').hide();
-$("#btnFechar").hide();
 
-$("#btnFechar").click(function(){
-	$('#dvDetalhes').hide();
-	$("#btnFechar").hide();	
-});
 
-function mostrarDetalhes(id, elemento)
+function mostrarDetalhes(id)
 {
 
 	//$(elemento).removeCss("background-color", "red")
@@ -29,7 +24,7 @@ function mostrarDetalhes(id, elemento)
 		$('#cad_05').hide();
 		$('#cad_06').hide();
 		$("#btnFechar").show();	
-		$(elemento).addClass('bg-gray-300');
+		
 
 	}
 	else if (id == "2")
@@ -55,7 +50,7 @@ function mostrarDetalhes(id, elemento)
 		$('#cad_05').hide();
 		$('#cad_06').hide();
 		$("#btnFechar").show();
-		$(elemento).addClass('bg-gray-300');
+		
 		
 	}
    else if (id == "4")
@@ -68,7 +63,7 @@ function mostrarDetalhes(id, elemento)
 		$('#cad_05').hide();
 		$('#cad_06').hide();
 		$("#btnFechar").show();	
-		$(elemento).addClass('bg-gray-300');
+		
 	
 	}		
 	 else if (id == "5")
@@ -81,7 +76,7 @@ function mostrarDetalhes(id, elemento)
 		$('#cad_05').show();
 		$('#cad_06').hide();
 		$("#btnFechar").show();	
-		$(elemento).addClass('bg-gray-300');
+		
 			
 	}		
 	 else if (id == "6")
@@ -94,7 +89,7 @@ function mostrarDetalhes(id, elemento)
 		$('#cad_05').hide();
 		$('#cad_06').show();
 		$("#btnFechar").show();	
-		$(elemento).addClass('bg-gray-300');
+		
 	
 		
 	}else{
@@ -106,30 +101,13 @@ function mostrarDetalhes(id, elemento)
 		$('#cad_05').hide();
 		$('#cad_06').hide();
 		$("#btnFechar").hide();	
-		//$('#modal').attr('data-toggle', 'modal');
-        //$('#modal').attr('data-target', '#modal');
+
 	}
 }
 
 
 
-//Tela - Menu/Benefícios/Aposentadoria 
-$('#dvTodas').hide();
-$('#dvRegimes').hide();
 
-$('#btnConsultar').click(function(){
-	
-	if ($("#radio1").is(":checked"))
-	{
-		$('#dvTodas').show();
-		$('#dvRegimes').hide();
-	}else
-	
-	{	$('#dvTodas').hide();
-		$('#dvRegimes').show();
-	}
-	
-});
 
 //Tela - Menu/Homologações/Aposentadoria 
 $('#dvComTriagem').hide();
@@ -158,7 +136,10 @@ tr.on('click', function () {
 		$(this).toggleClass('colorir');
 		mostrarDetalhes(this.id);
 		}
-		else $(this).removeClass('colorir');				
+		else{
+			$(this).removeClass('colorir');
+			//$('#dvDetalhes').hide();	
+		} 			
     })
 });
 

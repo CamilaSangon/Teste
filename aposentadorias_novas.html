@@ -152,11 +152,25 @@
       <hr class="sidebar-divider">
       <!-- Heading -->
 	  <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+     <li class="nav-item">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-table"></i>
           <span> AUDITORIA</span></a>
       </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConfig" aria-expanded="true" aria-controls="collapseConfig" >
+          <i class="fas fa-wrench"></i>
+          <span>CONFIGURAÇÕES</span>
+        </a>
+        <div id="collapseConfig" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="#">Sair</a>
+          </div>
+        </div>
+      </li> 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
@@ -311,8 +325,8 @@
             </select></td>
             <td>31/07/2020</td>
 						<td>31/07/2020</td>
-					</tr id="6">
-						<tr>
+					</tr >
+						<tr id="6">
 						<td title="Detalhes" id="6"><b><a href="#">67192124869</a></b></td>
 						<td><a href="cadastro_novo_06.html">6000.2020/0000226-7</a></td>
 						<td>Tempo de Contribuição</td>
@@ -333,10 +347,13 @@
 				</tbody>
       </table>
       <br/>
-      <div class="card shadow mb-4" id= "dvDetalhes" >
-        <div class="card-header py-3">
-          <h6 class="m-0 font-weight-bold text-primary">Detalhes </h6>           
-        </div>
+      <div class="card shadow mb-4" id="dvDetalhes">
+        <!-- Card Header - Accordion -->
+        <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+          <h6 class="m-0 font-weight-bold text-primary">Detalhes</h6>
+        </a>
+        <!-- Card Content - Collapse -->
+        <div class="collapse show" id="collapseCardExample">
         <div class="card-body">        
         <div class="form-group" id="cad_01">
          <div class="row">
@@ -435,6 +452,7 @@
         </div>
         </div>	
           </div>
+        </div>
         </div>			
 		 </div>
    <br/>
@@ -454,10 +472,10 @@
       <!-- End of Main Content -->
 
       <!-- Footer -->
-     <footer class="sticky-footer bg-white">
+   <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>PRODAM</span>
+            <span>PRODAM - IPREM</span>
           </div>
         </div>
       </footer>

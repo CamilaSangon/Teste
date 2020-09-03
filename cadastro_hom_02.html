@@ -150,11 +150,25 @@
       <hr class="sidebar-divider">
       <!-- Heading -->
 	  <!-- Nav Item - Tables -->
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+     <li class="nav-item">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-table"></i>
           <span> AUDITORIA</span></a>
       </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConfig" aria-expanded="true" aria-controls="collapseConfig" >
+          <i class="fas fa-wrench"></i>
+          <span>CONFIGURAÇÕES</span>
+        </a>
+        <div id="collapseConfig" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="#">Sair</a>
+          </div>
+        </div>
+      </li> 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
 
@@ -255,10 +269,13 @@
 					</div>
 					</div>
 					</div>
-						<div class="card shadow mb-4" style="display:none">
-						<div class="card-header py-3">
-							<h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-id-card"></i> Dados do Benefício Pensão</h6>
-						</div>
+					<div class="card shadow mb-4">
+						<!-- Card Header - Accordion -->
+						<a href="#collapseCardExample1" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseCardExample1">
+						  <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-id-card"></i> Dados do Benefício Pensão</h6>
+						</a>
+						<!-- Card Content - Collapse -->
+						<div class="collapse fade" id="collapseCardExample1">
 					<div class="card-body" style="font-size:10pt">
 					<div class="form-group">									
 						<div class="row">
@@ -277,10 +294,14 @@
 						</div>
 					</div>
 					</div>	
-					<div class="card shadow mb-4" style="display:none">
-					<div class="card-header py-3">
-							<h6 class="m-0 font-weight-bold text-primary"> <i class="fas fa-user"></i> Dados dos Dependentes </h6>
-						</div>
+					</div>
+					<div class="card shadow mb-4">
+						<!-- Card Header - Accordion -->
+						<a href="#collapseCardExample2" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseCardExample2">
+						  <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-id-card"></i> Beneficiários</h6>
+						</a>
+						<!-- Card Content - Collapse -->
+						<div class="collapse fade" id="collapseCardExample2">
 						<div class="card-body" style="font-size:10pt">
 					<div class="form-group">
 					<div class="table-responsive">
@@ -327,6 +348,7 @@
 			   </div>
 				</div>
 				</div>
+			</div>
 					<div class="card shadow mb-4">
 						<div class="card-header py-3">
 							<h6 class="m-0 font-weight-bold text-primary"> <i class="fas fa-search m-1"></i> Dados dos Processos </h6>
@@ -518,10 +540,10 @@
       <!-- End of Main Content -->
 
       <!-- Footer -->
-     <footer class="sticky-footer bg-white">
+   <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>PRODAM</span>
+            <span>PRODAM - IPREM</span>
           </div>
         </div>
       </footer>
