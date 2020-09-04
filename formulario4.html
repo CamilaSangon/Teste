@@ -269,217 +269,112 @@
 
 			 </div>
 			</div>
-			<div class="card shadow mb-4" style="display:none">
-			<div class="card-header py-3">
-			<h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info mr-1"></i> Dados do Benefício Pensão</h6>
-			</div>
-			<div class="card-body" style="font-size:10pt">
-			<div class="form-group">
-				<div class="row">
-					<div class="col-3"><label for="numpensao" class="mr-sm-2"><b>Número da Pensão:</b></label></div>
-					<div class="col-3"><label for="beneficio" class="mr-sm-2"><b>Data de Início do Benefício:</b></label></div>
-					<div class="col-3"><label for="cessacao" class="mr-sm-2"><b>Data Cessação Pensão:</b></label></div>
-					<div class="col-3"><label for="renda" class="mr-sm-2"><b>Renda Mensal Inicial:</b></label></div>
-				</div>
-				<div class="row">
-				<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="numpensao" value=""></div>
-				<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="dtBeneficioPensao" value=""></div>
-				<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="dtcessacaoPensao" value=""></div>
-				<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="valorRendaPensao" value=""></div>
-				 </div>
-				</div>
-			 </div>	
-			</div>
-			<div class="card shadow mb-4" style="display:none">
-			<div class="card-header py-3">
-				<h6 class="m-0 font-weight-bold text-primary"> <i class="fas fa-user"></i> Dados dos Dependentes </h6>
-			</div>
-			<div class="card-body" style="font-size:10pt">
-			<div class="form-group" >
-				<div class="row">
-				<div class="col-3"><label for="cpf" class="mr-sm-2"><b>CPF:</b></label></div>
-				<div class="col-3"><label for="nome" class="mr-sm-2"><b>Nome:</b> </label></div>
-				</div>
-			<div class="row">
-				<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="cpf" value=""></div>
-				<div class="col-8"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="nome" value=""></div>
-			</div>
-				<div class="row">
-				<div class="col-3"><label for="nomeMae" class="mr-sm-2"><b>Nome da Mãe:</b></label></div>
-				</div>
-			<div class="row">		
-				<div class="col-8"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="nmmae" value=""></div>
-			 </div>
-			<div class="row">
-				<div class="col-3"><label for="dtNascimento" class="mr-sm-2"><b>Data Nascimento:</b></label></div>
-				<div class="col-3"><label for="sexo" class="mr-sm-2"><b>Sexo:</b></label></div>
-			</div>
-			<div class="row">
-				<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="dtNascimento" value=""></div>
-				<div class="col-3"><select name="sexo" class="custom-select">
-					<option value = "0" selected>Selecione</option>
-					<option value="1">Feminino</option>
-					<option value="2">Masculino</option>
-				</select></div>
-			</div>
-			<div class="row">
-				<div class="col-3"><label for="estadoCivil" class="mr-sm-2"><b>Estado Civil:</b></label></div>
-				<div class="col-3"><label for="Capacidade" class="mr-sm-2"><b>Capacidade:</b></label></div>
-			</div>
-			<div class="row">
-				<div class="col-3"><select name="sexo" class="custom-select">
-					<option value = "0" selected>Selecione</option>
-					<option value="1">Solteiro(a)</option>
-					<option value="2">Casado(a)</option>
-					<option value="3">Divorciado(a)</option>
-					<option value="4">Desquitado(a)</option>
-					<option value="5">Viúvo(a)</option>
-				</select></div>
-				<div class="col-3"><select name="capacidade" class="custom-select">
-					<option value = "0" selected>Selecione</option>
-					<option value="1">Válido</option>
-					<option value="2">Inválido</option>
-				</select></div>	
-			</div>
-			</div>
-	
-			<div class="row">
-				<div class="col-3"><label for="dtInclusao" class="mr-sm-2"><b>Data da Inclusao:</b></label></div>
-				<div class="col-3"><label for="motivoInclusao" class="mr-sm-2"><b>Motivo Inclusão:</b></label></div>
-				<div class="col-3"><label for="dtExclusao" class="mr-sm-2"><b>Data da Exclusão do Beneficiário:</b></label></div>
-				<div class="col-3"><label for="motivoExclusao" class="mr-sm-2"><b>Motivo da Exclusão do Beneficiário:</b></label></div>
-
-			</div>	
-			<div class="row">
-				<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="dtInclusao" value=""></div>
-				<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="motivoInclusao" value=""></div>
-				<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="dtExclusao" value=""></div>
-				<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="motivoExclusao" value=""></div>
-			</div>
-			<br/>
-				<div class="form-group">
-				<div align="right">							 
-				 <button type="submit" class="btn btn-primary mb-2">Adicionar Beneficiário</button>
-				 </div>
-			   </div>			
-			<br/>
-			<br/>
-			<div class="form-group">
-			<div class="table-responsive">
-			<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-				<thead style="font-size:10pt">
-					<tr>
-						<th>CPF</th>
-						<th>Nome</th>
-						<th>Nome da Mãe</th>
-						<th>Data de Nascimento</th>
-						<th>Sexo</th>
-						<th>Estado Civil</th>
-						<th>Vinculo</th>
-						<th>Capacidade</th>
-						<th>Data da Inclusão</th>
-						<th>Motivo de Inclusão </th>
-						<th>Data da Exclusão do Beneficiário </th>
-						<th>Motivo da Exclusão do Beneficiário </th>
-						<th>Excluir</th>
-					</tr>
-				</thead>
-				<tbody style="font-size:10pt">
-					<tr>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					 <td></td>
-					</tr>
-				</tbody>
-			</table>
-				</div>
-				</div>	
-
-				</div>
-				</div>
-
 			<div class="card shadow mb-4">
-			<div class="card-header py-3">
-			<h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info mr-1"></i> Dados dos Processos</h6>
-			</div>
-			<div class="card-body" style="font-size:10pt">
-			<br/>
-			<div class="form-group">
-				<div class="row">
-					<div class="col-3"><label for="numprocesso" class="mr-sm-2"><b>Número do Processo:</b></label></div>
-					<div class="col-3"><label for="" class="mr-sm-2"><b>Data tramitação ao TCM:</b></label></div>
-					<div class="col-3"><label for="" class="mr-sm-2"><b>Data de Assinatura da Homologação:</b></label></div>
-					<div class="col-3"><label for="" class="mr-sm-2"><b>Data Publicação da Homologação:</b></label></div>
+				<div class="card-header py-3">
+				<h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info mr-1"></i> Dados do Benefício Pensão</h6>
 				</div>
-				<div class="row">
-					<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="numProcesso" value="6000.2020/0000226-4"></div>
-					<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="dtTramitacaoTCM" value=""></div>
-					<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="dtAssinaturaHomo" value=""></div>
-					<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="dtPublicacaoHomo" value=""></div>
-				 </div>
-			 </div>
-			</div>
-			</div>
+				<div class="card-body" style="font-size:10pt">
+				<div class="form-group">
+					<div class="row">
+						<div class="col-3"><label for="numpensao" class="mr-sm-2"><b>Número da Pensão:</b></label></div>
+						<div class="col-3"><label for="beneficio" class="mr-sm-2"><b>Data de Início do Benefício:</b></label></div>
+						<div class="col-3"><label for="cessacao" class="mr-sm-2"><b>Data Cessação Pensão:</b></label></div>
+						<div class="col-3"><label for="renda" class="mr-sm-2"><b>Renda Mensal Inicial:</b></label></div>
+					</div>
+					<div class="row">
+					<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="numpensao" value=""></div>
+					<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="dtBeneficioPensao" value=""></div>
+					<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="dtcessacaoPensao" value=""></div>
+					<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="valorRendaPensao" value=""></div>
+					 </div>
+					</div>
+				 </div>	
+				</div>
+				<div class="card shadow mb-4" >
+				<div class="card-header py-3">
+					<h6 class="m-0 font-weight-bold text-primary"> <i class="fas fa-user"></i> Dados dos beneficiarios </h6>
+				</div>
+				<div class="card-body" style="font-size:10pt">
+				<div class="form-group">
+				<div class="table-responsive">
+				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+					<thead style="font-size:10pt">
+						<tr>
+							<th>CPF</th>
+							<th>Nome</th>
+							<th>Nome da Mãe</th>
+							<th>Data de Nascimento</th>
+							<th>Sexo</th>
+							<th>Estado Civil</th>
+							<th>Vinculo</th>
+							<th>Capacidade</th>
+							<th>Data da Inclusão</th>
+							<th>Motivo de Inclusão </th>
+							<th>Data da Exclusão do Beneficiário </th>
+							<th>Motivo da Exclusão do Beneficiário </th>
+						</tr>
+					</thead>
+					<tbody style="font-size:10pt">
+						<tr>
+						 <td></td>
+						 <td></td>
+						 <td></td>
+						 <td></td>
+						 <td></td>
+						 <td></td>
+						 <td></td>
+						 <td></td>
+						 <td></td>
+						 <td></td>
+						 <td></td>
+						 <td></td>
+						</tr>
+					</tbody>
+				</table>
+					</div>
+					</div>	
+	
+					</div>
+					</div>
+				<div class="card shadow mb-4">
+					<div class="card-header py-3">
+					<h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info mr-1"></i> Dados dos Processos</h6>
+					</div>
+					<div class="card-body" style="font-size:10pt">
+					<br/>
+					<div class="form-group">
+						<div class="table-responsive">
+							<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+								<thead style="font-size:10pt">
+									<tr>
+									<th> Número do Processo </th>
+									<th> Data tramitação ao TCM</th>
+									<th> Data de Assinatura da Homologação</th>
+									<th> Data Publicação da Homologação</th>
+									</tr>
+								</thead>
+								<tbody style="font-size:10pt">
+								<tr>
+									<td> 6000.2020/0000226-4 </td>
+									<td> </td>
+									<td> </td>
+									<td> </td>
+								</tr>
+								</tbody>
+							</table>
+					 </div>
+					</div>
+					</div>
+					</div>	
 			<div class="card shadow mb-4">
 			<div class="card-header py-3">
 			<h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-history"></i> Tempos </h6>
 			</div>
 			<div class="card-body" style="font-size:10pt">
 			<br/>
-			<div class="form-group">
-				<div class="row">
-				<div class="col-10"><label for="tmpTotal" class="mr-sm-2"><b>Tempo Total (dias) de Contribuição:</b></label></div>
-				</div>
-				<div class="row">
-					<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="tmpContribuicao" value=""></div>
-				 </div>
-			 </div>
-			 <div class="form-group">
-				<div class="row">
-				<div class="col-3"><label for="descricaoRegime" class="mr-sm-2"><b>Descrição do Regime:</b></label></div>
-				<div class="col-3"><label for="ProtocoloCertidao" class="mr-sm-2"><b>Protocolo da Certidão:</b></label></div>
-				<div class="col-3"><label for="tempoTotal" class="mr-sm-2"><b>Tempo Total (dias) Líquido da Certidão:</b></label></div>
-				</div>
-				<div class="row">
-					<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="descRegime" value=""></div>
-					<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="Protocolo" value=""></div>
-					<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="tempoLiquido" value=""></div>					
-				 </div>
-				 <div class="row">
-				<div class="col-3"><label for="dataIngresso" class="mr-sm-2"><b>Data de Ingresso no Regime de Origem</b></label></div>
-				<div class="col-3"><label for="dataDesvinculacao" class="mr-sm-2"><b>Data de Desvinculação no Regime de Origem</b></label></div>
-				</div>
-				 <div class="row">
-				<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="dtIngresso" value=""></div>
-					<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="dtDesvinculacao" value=""></div>
-				</div>
-				 <div class="row">
-				<div class="col-3"><label for="tempoAverbado" class="mr-sm-2"><b>Tempo Averbado Total (dias)</b></label></div>
-				<div class="col-3"><label for="dataDesvinculacao" class="mr-sm-2"><b>Percentual de Participação Pró-rata</b></label></div>
-				</div>
-				 <div class="row">
-				<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="tmpAverbado" value=""></div>
-					<div class="col-3"><input type="text" class="form-control mb-2 mr-sm-2" placeholder="" id="PercentualParticipacao" value=""></div>
-				</div>
-			 </div>
-			 <div class="form-group">
-			 <div align="right">
-				<button type="submit" class="btn btn-primary mb-2" title="adicionar tempos"><i class="far fa-plus-square"></i></button>
-			</div>
-			</div>
 			 <div class="form-group">
 					 <div class="table-responsive">
-						<table class="table table-bordered" id="dataTable2" width="100%" cellspacing="0">
+						<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 							<thead style="font-size:10pt">
 								<tr>
 								<th> Descrição do Regime </th>
@@ -489,7 +384,6 @@
 								<th> Data de Desvinculação no Regime de Origem</th>
 								<th> Tempo Averbado Total (dias)</th>
 								<th> Percentual de Participação Pró-rata</th>
-								<th> Editar</th>
 								</tr>
 							</thead>
 							<tbody style="font-size:10pt">
@@ -501,7 +395,6 @@
 								<td> 26/05/2020</td>
 								<td> 9131</td>
 								<td> 12%</td>
-								<td><i class="fas fa-edit"></i></td>
 							</tr>
 							<tr>
 								<td> OUTROS RPPS - FORTALEZA</td>
@@ -511,7 +404,6 @@
 								<td> 26/05/1980</td>
 								<td> 1826 </td>
 								<td> 4%</td>
-								<td><i class="fas fa-edit"></i></td>
 							</tr>
 							<tr>
 								<td> OUTROS RPPS - BELO HORIZONTE</td>
@@ -521,7 +413,6 @@
 								<td> 26/05/1980</td>
 								<td> 1826 </td>
 								<td> 4%</td>
-								<td><i class="fas fa-edit"></i></td>
 							</tr>
 							</tbody>
 						</table>
@@ -529,63 +420,10 @@
 					</div>
 			</div>
 			</div>
-
-		  <div class="card shadow mb-4" style=" display:none">
-			<div class="card-header py-3">
-			<h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-map-marker-alt mr-1"></i>DESTINAÇÃO</h6>
-			</div>
-			<div class="card-body">
-			<br/>
-			<div class="form-group">
-			<div class="row">
-				<div class="col-4"><label for="TipoRegime" class="mr-sm-2"><b>Tipo de Regime de Origem:</b></label></div>
-				</div>
-			<div class="row">
-				<div class="col-4">
-				<select name="averbação" class="custom-select">
-					<option value="0">Selecione</option>
-					<option selected value="1">RGPS</option>
-					<option value="2">SPPREV</option>
-					<option value="3">OUTROS RPPS</option>
-				</select></div>
-			 </div>
-			 </div>
-			 <div class="form-group">
-			<div class="row">
-				<div class="col-4"><label for="entidade" class="mr-sm-2"><b>Entidade:</b></label></div>
-				<div class="col-4"><label for="uf" class="mr-sm-2"><b>UF:</b></label></div>
-				<div class="col-4"><label for="destinatario" class="mr-sm-2"><b>Destinatário:</b></label></div>
-				</div>
-			<div class="row">
-				<div class="col-4">
-				<select name="entidade" class="custom-select">
-					<option value="0">Selecione</option>
-					<option value="1">Estadual</option>
-					<option value="2">Municipal</option>
-					<option selected value="3">Federal</option>
-				</select></div>
-				<div class="col-4">
-				<select name="uf" class="custom-select">
-					<option value="0">Selecione</option>
-					<option value="1">RJ</option>
-					<option selected value="2">SP</option>
-					<option value="3">ES</option>
-				</select></div>
-				<div class="col-4"><select name="uf" class="custom-select">
-					<option value="0">Selecione</option>
-					<option value="1">RIO DE JANEIRO</option>
-					<option selected value="2">SÃO PAULO</option>
-					<option value="3">ESPIRITO SANTO</option>
-				</select></div>
-			 </div>
-			 </div>
-			</div>
-			</div>	
 		
 			<div class="form-group">
 			 <div align="right">
 				<button type="submit" class="btn btn-primary mb-2" id="btnVoltar">Voltar</button>
-				<button type="submit" class="btn btn-primary mb-2">Salvar</button>
 				<button type="submit" class="btn btn-primary mb-2">Imprimir Requerimento</button>
 			</div>
 			</div>
@@ -644,6 +482,7 @@
 
   <!-- Custom scripts for all pages-->
   <script src="js/sb-admin-2.min.js"></script>
+  <script src="js/formulario.js"></script>
 
   <!-- Page level plugins -->
   <script src="vendor/datatables/jquery.dataTables.min.js"></script>
