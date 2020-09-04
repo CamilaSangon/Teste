@@ -5,9 +5,25 @@ $("#btnVoltarAposentadorias").click(function () {
 $("#btnVoltarAposNovas").click(function () {
     window.open('index.html','janela');
 });
+$(document).ready(function() {
+	CarregaDados();
+});
 
 $('#dvDetalhes').hide();
+$('#dvTodas').hide();
+$('#dvRegimes').hide();	
 
+function CarregaDados(){
+	//$('#dataTable tbody').empty();
+	$('#dataTable').DataTable({
+		"pagingType": "numbers",
+		"searching": true,
+		"info": true,
+		"bLengthChange": false,
+		"pageLength": 10
+	});
+	$('#dvDetalhes').hide();
+}
 
 function mostrarDetalhes(id)
 {
@@ -105,6 +121,19 @@ function mostrarDetalhes(id)
 	}
 }
 
+$("#cmbBeneficio").change(function(e){
+	if ($("#cmbBeneficio").val()== "1")
+	{
+		$('#dvTodas').show();
+		$('#dvRegimes').hide();		
+	}else	
+	{	
+		$('#dvTodas').hide();
+		$('#dvRegimes').show();		
+		
+	}
+
+});
 
 
 

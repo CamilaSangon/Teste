@@ -213,25 +213,19 @@
               <option value="4">Triagem Outros RPPS</option>
             </select></div>
           </div>
-			 <div class="form-group">
-			 <div align="right">
-				<button type="submit" class="btn btn-primary mb-2" id="btnConsultar"> Consultar</button>	
-				<!--<button type="submit" class="btn btn-primary mb-2" id="btnRequerimento"> Formulário</button>-->								
-			 </div>
-			 </div>
 			</div>		
       </div>
     </div>
 		  		  
-          <!-- DataTales Example -->
-          <div class="card shadow mb-4" id="dvTodas">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info-circle mr-1"></i>Dados</h6>
-            </div>
-            <div class="card-body">
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4" id="dvTodas">
+        <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info-circle mr-1"></i>Dados</h6>
+        </div>
+    <div class="card-body">
 		<div class="form-group">
 			<div class="table-responsive">
-				<table class="table table-bordered" id="dataTable01" width="100%" cellspacing="0">
+				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 					<thead style="font-size:10pt" >
 						<tr>
 							<th class="bg-gray-300">CPF</th> 
@@ -246,32 +240,65 @@
 					</thead>
 					<tbody style="font-size:10pt" >
 					<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td> 57145858010</td>
+					<td> RGPS</td>
+					<td> 6000.2020/0000228-0</td>
+					<td> Tempo de serviço</td>
+					<td> 31/08/2020</td>
+					<td> 26/08/2020 </td>
+					<td> 26/08/2020 </td>
+					<td> 26/08/2020 </td>
 					</tr>
 					</tbody>
-				</table>
+        </table>
+        <br/>
+        <div class="card shadow mb-4" id="dvDetalhes" style="display:none;">
+          <!-- Card Header - Accordion -->
+          <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+            <h6 class="m-0 font-weight-bold text-primary">Detalhes</h6>
+          </a>
+          <!-- Card Content - Collapse -->
+          <div class="collapse show" id="collapseCardExample">
+          <div class="card-body">
+          <div class="form-group" id="cad_01">
+          <div class="row">
+            <div class="col-3" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> </label></div>
+            <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> </label></div>
+			      <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>	
+          </div>
+          <div class="row">
+            <div class="col-2" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>Unidade do Servidor:</b></label></div>
+            <div class="col-2" style="font-size:10pt"><label for="dtTramitacaoComprev" class="mr-sm-2"><b>Data tramitação ao COMPREV:</b> </label></div>
+            <div class="col-2" style="font-size:10pt"><label for="dtTramitacaoTCM" class="mr-sm-2"><b>Data tramitação ao TCM:</b>  </label></div>
+          </div>
+        </div>
+        <div class="form-group" id="cad_02">
+          <div class="row">
+          <div class="col-3" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> </label></div>
+          <div class="col-3" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> </label></div>				
+          <div class="col-3" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
+        </div>
+        <div class="row">
+          <div class="col-2" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>Unidade do Servidor:</b></label></div>
+          <div class="col-2" style="font-size:10pt"><label for="dtTramitacaoComprev" class="mr-sm-2"><b>Data tramitação ao COMPREV:</b>  </label></div>
+          <div class="col-2" style="font-size:10pt"><label for="dtTramitacaoTCM" class="mr-sm-2"><b>Data tramitação ao TCM:</b>  </label></div>
+        </div>
+        </div>
+      </div>
+      </div>
 			</div>
 		  </div>
-            </div>
-          </div>
-          <div class="card shadow mb-4" id="dvDetalhes">
-            <!-- Card Header - Accordion -->
-            <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
-              <h6 class="m-0 font-weight-bold text-primary">Detalhes</h6>
-            </a>
-            <!-- Card Content - Collapse -->
-            <div class="collapse show" id="collapseCardExample">
-            <div class="card-body">
+    </div>
+    </div>
+  </div>
+    <div class="card shadow mb-4" id="dvRegimes">
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-info-circle mr-1"></i>Dados</h6>
+      </div>
+  <div class="card-body">
 		<div class="form-group">
 			<div class="table-responsive">
-				<table class="table table-bordered" id="dataTable02" width="100%" cellspacing="0">
+				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 					<thead style="font-size:10pt" >
 						<tr>
 							<th class="bg-gray-300">CPF</th> 
@@ -298,64 +325,50 @@
 					<td></td>
 					</tr>
 					</tbody>
-				</table>
-			</div>
-		  </div>
-            </div>
+        </table>
+        <br/>
+        <div class="card shadow mb-4" id="dvDetalhes" style="display:none;">
+          <!-- Card Header - Accordion -->
+          <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+            <h6 class="m-0 font-weight-bold text-primary">Detalhes</h6>
+          </a>
+          <!-- Card Content - Collapse -->
+          <div class="collapse show" id="collapseCardExample">
+          <div class="card-body">
+          <div class="form-group" id="cad_01">
+          <div class="row">
+            <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> 99999 </label></div>
+            <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> 99999999 </label></div>
+			      <div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b>1 </label></div>	
           </div>
-          <div class="card shadow mb-4" id="dvDetalhes">
-            <!-- Card Header - Accordion -->
-            <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
-              <h6 class="m-0 font-weight-bold text-primary">Detalhes</h6>
-            </a>
-            <!-- Card Content - Collapse -->
-            <div class="collapse show" id="collapseCardExample"
-            <div class="card-body">
-			<div class="form-group" id="cad_01">
-			 <div class="row">
-				<div class="col-4"><label for="nit" class="mr-sm-2"><b>NIT:</b> </label></div>				
-			 </div>
-			  <div class="row">
-				<div class="col-4"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> </label></div>
-			  </div>
-			 <div class="row">
-			 <div class="col-4"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
-			 </div>
-			 <div class="row">
-			 <div class="col-6"><label for="unidade" class="mr-sm-2"><b>Unidade do Servidor:</b></label></div>
-			 </div>
-			 <div class="row">
-			 <div class="col-6"><label for="unidade" class="mr-sm-2"><b>Data tramitação ao COMPREV:</b> </label></div>
-			 </div>
-			 <div class="row">
-			 <div class="col-6"><label for="unidade" class="mr-sm-2"><b>Data tramitação ao TCM:</b>  </label></div>
-			 </div>
-		  </div>
-		  <div class="form-group" id="cad_02">
-			 <div class="row">
-				<div class="col-4"><label for="nit" class="mr-sm-2"><b>NIT:</b> </label></div>
-			 </div>
-			 <div class="row">
-			 <div class="col-4"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> </label></div>				
-			 </div>
-			 <div class="row">
-			 <div class="col-4"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> </label></div>
-			 </div>
-			 <div class="row">
-			   <div class="col-6"><label for="unidade" class="mr-sm-2"><b>Unidade do Servidor:</b></label></div>
-			 </div>
-			 <div class="row">
-			 <div class="col-6"><label for="unidade" class="mr-sm-2"><b>Data tramitação ao COMPREV:</b>  </label></div>
-			 </div>
-			 <div class="row">
-			 <div class="col-6"><label for="unidade" class="mr-sm-2"><b>Data tramitação ao TCM:</b>  </label></div>
-			 </div>
-		  </div>
-			</div>
-			</div>
+          <div class="row">
+            <div class="col-2" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>Unidade do Servidor:</b> PMSP</label></div>
+            <div class="col-2" style="font-size:10pt"><label for="dtTramitacaoComprev" class="mr-sm-2"><b>Data tramitação ao COMPREV:</b> 31/08/2020 </label></div>
+            <div class="col-2" style="font-size:10pt"><label for="dtTramitacaoTCM" class="mr-sm-2"><b>Data tramitação ao TCM:</b> 31/08/2020   </label></div>
+          </div>
+        </div>
+        <div class="form-group" id="cad_02">
+          <div class="row">
+          <div class="col-2" style="font-size:10pt"><label for="nit" class="mr-sm-2"><b>NIT:</b> 9999999 </label></div>
+          <div class="col-2" style="font-size:10pt"><label for="matricula" class="mr-sm-2"><b>Matrícula:</b> 9999999 </label></div>				
+          <div class="col-2" style="font-size:10pt"><label for="vinculo" class="mr-sm-2"><b>Vinculo:</b> 1 </label></div>
+        </div>
+        <div class="row">
+          <div class="col-2" style="font-size:10pt"><label for="unidade" class="mr-sm-2"><b>Unidade do Servidor:</b> SMS</label></div>
+          <div class="col-2" style="font-size:10pt"><label for="dtTramitacaoComprev" class="mr-sm-2"><b>Data tramitação ao COMPREV:</b> 31/08/2020 </label></div>
+          <div class="col-2" style="font-size:10pt"><label for="dtTramitacaoTCM" class="mr-sm-2"><b>Data tramitação ao TCM:</b> 31/08/2020 </label></div>
+        </div>
+        </div>
+      </div>
+     </div>
+		 </div>
+        </div>
+
+		 </div>
+       </div>
+    </div>
 		<div class="form-group">
 		 <div align="right">
-			<button type="submit" class="btn btn-primary mb-2" id="btnFechar">Fechar Detalhes</button>
 			<button type="submit" class="btn btn-primary mb-2" id="btnVoltarAposentadorias">Voltar</button>
 		 </div>	
 		</div>
