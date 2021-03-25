@@ -1,4 +1,4 @@
 
 $("#btnRequerimento").click(function () {
-    window.open('requerimento.html','janela');
+    window.open('requerimentos.html','janela');
 });
