@@ -193,7 +193,30 @@
 
           <!-- Page Heading -->
           <h1 class="h3 mb-2 text-gray-800">Consulta</h1>
-          <br/>		  
+          <br/>
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+          <h6 class="m-0 font-weight-bold text-primary"><i class="fas fa-search mr-1"></i>Filtro de Pesquisa</h6>
+                </div>
+                <div class="card-body">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-4"><label for="requerimento" class="mr-sm-2"><b>Status do Requerimento:</b> </label></div>
+              </div>	
+              <div class="row">
+                <div class="col-4">
+                <select name="Requerimento" class="custom-select" id="cmbRequerimento"> 
+                  <option value="0" selected>Selecione</option>
+                  <option value="1">Enviados</option>
+                  <option value="2">Em Análise</option>
+                  <option value="3">Compensados</option>
+                  <option value="4">Em Exigência</option>
+                  <option value="5">Sem direito à Compensação</option>
+                </select></div>
+              </div>
+          </div>		
+          </div>
+        </div>		  
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
